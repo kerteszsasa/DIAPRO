@@ -1,0 +1,393 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2014.06.20.</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">16:59:40</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc" class="file"><acronym title="E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc">E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">12</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDASAO1C"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEBO1C">Clearance Constraint (Gap=20mil) (All),((InNamedPolygon('Bottom GND'))  or (InNamedPolygon('Top GND')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAKBO1C">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAQBO1C">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAWBO1C">Silkscreen Over Component Pads (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA2BO1C">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAGDO1C">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMDO1C">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEEO1C">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAKEO1C">Width Constraint (Min=10mil) (Max=60mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAQEO1C">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAWEO1C">Clearance Constraint (Gap=15mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAJGO1C">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAPGO1C">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">12</td>
+</tr>
+</table><br><hr><a name="IDA2BO1C"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True">Pad U4-2(18193.543mil,13493.74mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20066.296mil|Location2.X=20122.31mil|Location1.Y=13449.067mil|Location2.Y=13521.049mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20066.296mil|Location2.X=20122.31mil|Location1.Y=13449.067mil|Location2.Y=13521.049mil|Absolute=True">Pad U4-1(18144.303mil,13485.058mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20164.777mil|Location2.X=20220.791mil|Location1.Y=13466.432mil|Location2.Y=13538.413mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20164.777mil|Location2.X=20220.791mil|Location1.Y=13466.432mil|Location2.Y=13538.413mil|Absolute=True">Pad U4-3(18242.784mil,13502.423mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True">Pad U4-2(18193.543mil,13493.74mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True">Pad U7-2(17839.213mil,13493.74mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19710.566mil|Location2.X=19771.266mil|Location1.Y=13469.371mil|Location2.Y=13543.991mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19710.566mil|Location2.X=19771.266mil|Location1.Y=13469.371mil|Location2.Y=13543.991mil|Absolute=True">Pad U7-1(17790.916mil,13506.681mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True">Pad U7-3(17887.509mil,13480.799mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True">Pad U7-2(17839.213mil,13493.74mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAMDO1C"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19335.887mil|Location2.X=19455.137mil|Location1.Y=16721.832mil|Location2.Y=16841.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19335.887mil|Location2.X=19455.137mil|Location1.Y=16721.832mil|Location2.Y=16841.082mil|Absolute=True">Hole Size Constraint: Pad J1-1(17445.512mil,16781.457mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19585.887mil|Location2.X=19705.137mil|Location1.Y=16721.832mil|Location2.Y=16841.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19585.887mil|Location2.X=19705.137mil|Location1.Y=16721.832mil|Location2.Y=16841.082mil|Absolute=True">Hole Size Constraint: Pad J1-2(17695.512mil,16781.457mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19460.887mil|Location2.X=19580.137mil|Location1.Y=16921.832mil|Location2.Y=17041.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19460.887mil|Location2.X=19580.137mil|Location1.Y=16921.832mil|Location2.Y=17041.082mil|Absolute=True">Hole Size Constraint: Pad J1-3(17570.512mil,16981.457mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAWEO1C"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=15mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True">Pad U4-2(18193.543mil,13493.74mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20066.296mil|Location2.X=20122.31mil|Location1.Y=13449.067mil|Location2.Y=13521.049mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20066.296mil|Location2.X=20122.31mil|Location1.Y=13449.067mil|Location2.Y=13521.049mil|Absolute=True">Pad U4-1(18144.303mil,13485.058mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20164.777mil|Location2.X=20220.791mil|Location1.Y=13466.432mil|Location2.Y=13538.413mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20164.777mil|Location2.X=20220.791mil|Location1.Y=13466.432mil|Location2.Y=13538.413mil|Absolute=True">Pad U4-3(18242.784mil,13502.423mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=20115.536mil|Location2.X=20171.55mil|Location1.Y=13457.749mil|Location2.Y=13529.731mil|Absolute=True">Pad U4-2(18193.543mil,13493.74mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True">Pad U7-2(17839.213mil,13493.74mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19710.566mil|Location2.X=19771.266mil|Location1.Y=13469.371mil|Location2.Y=13543.991mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19710.566mil|Location2.X=19771.266mil|Location1.Y=13469.371mil|Location2.Y=13543.991mil|Absolute=True">Pad U7-1(17790.916mil,13506.681mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True">Pad U7-3(17887.509mil,13480.799mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19758.862mil|Location2.X=19819.563mil|Location1.Y=13456.43mil|Location2.Y=13531.05mil|Absolute=True">Pad U7-2(17839.213mil,13493.74mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19666.102mil|Location2.X=20266.654mil|Location1.Y=13430mil|Location2.Y=13440mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19666.102mil|Location2.X=20266.654mil|Location1.Y=13430mil|Location2.Y=13440mil|Absolute=True">Track (17721.102mil,13435mil)(18311.654mil,13435mil)  Keep-Out Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\pcbdesigns\DIAPRO\RADIOSLAVE\radioslave.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=19807.159mil|Location2.X=19867.859mil|Location1.Y=13443.489mil|Location2.Y=13518.109mil|Absolute=True">Pad U7-3(17887.509mil,13480.799mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

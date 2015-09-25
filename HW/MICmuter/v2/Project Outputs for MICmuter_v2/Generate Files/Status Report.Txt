@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [MICmuter_v2.PcbDoc]
+   Generated File[Pick Place for MICmuter_v2.txt]
+   Generated File[Pick Place for MICmuter_v2.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 18:26:03 On 2015.05.04.

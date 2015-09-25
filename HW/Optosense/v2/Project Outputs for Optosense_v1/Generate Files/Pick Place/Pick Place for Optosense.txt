@@ -1,0 +1,47 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+D5         SOD-80            1411.378mil   -271.496mil   1411.378mil   -271.496mil   1411.378mil   -339.409mil  B        180.00 ZENER_3.3V     
+R3         FP_0603_RES       1647.378mil    -83.496mil   1647.378mil    -83.496mil   1647.378mil   -118.929mil  T         90.00 100K           
+SW1        SW_TACT_2PIN       329.685mil   -255.905mil    329.685mil   -255.905mil    329.685mil   -383.858mil  T         90.00 SW_tactile_2pin
+U2         ANALOG_SOT23-5     933.563mil   -442.914mil    933.032mil   -442.913mil    985.276mil   -480.315mil  T        180.00 MCP6001        
+U1         ANALOG_SOT23-5     926.996mil   -407.905mil    926.465mil   -407.906mil    978.709mil   -370.504mil  B        180.00 MCP6001        
+T4         FET_SOT23         1346.417mil    -90.535mil   1346.417mil    -90.535mil   1346.417mil    -142.78mil  T         90.00 SI2306         
+T3         FET_SOT23         1396.378mil   -426.496mil   1396.378mil   -426.496mil   1344.134mil   -426.496mil  B        360.00 MMBF170        
+T2         FET_SOT23          426.378mil   -265.827mil    426.378mil   -265.827mil    426.378mil   -213.583mil  B        270.00 MMBF170        
+T1         FET_SOT23         1741.465mil    -78.906mil   1741.465mil    -78.906mil   1793.709mil    -78.906mil  T        180.00 BSS84          
+R19        FP_0603_RES        666.378mil   -301.496mil    666.378mil   -301.496mil    701.811mil   -301.496mil  B        180.00 0R             
+R18        FP_0603_RES        985.866mil    -96.496mil    985.866mil    -96.496mil    985.866mil    -61.063mil  T        270.00 560K           
+R17        FP_0603_RES        845.866mil    -96.496mil    845.866mil    -96.496mil    845.866mil    -61.063mil  T        270.00 470K           
+R16        FP_0603_RES       1115.465mil   -390.906mil   1115.465mil   -390.906mil   1080.032mil   -390.906mil  T        360.00 10K            
+R15        FP_0603_RES        667.284mil    -89.567mil    667.284mil    -89.567mil    631.851mil    -89.567mil  B        360.00 100K           
+R14        FP_0603_RES        795.236mil    -418.15mil    795.236mil    -418.15mil    795.236mil   -382.717mil  B        270.00 2.2K           
+R13        FP_0603_RES       1478.307mil   -441.929mil   1478.307mil   -441.929mil   1478.307mil   -477.362mil  T         90.00 120R           
+R12        FP_0603_RES         816.89mil   -299.213mil     816.89mil   -299.213mil    852.323mil   -299.213mil  B        180.00 3K             
+R11        FP_0603_RES       1125.465mil   -394.906mil   1125.465mil   -394.906mil   1090.032mil   -394.906mil  B        360.00 100K           
+R10        FP_0603_RES       1258.819mil   -395.669mil   1258.819mil   -395.669mil   1223.386mil   -395.669mil  B          0.00 100K           
+R9         FP_0603_RES       1349.866mil   -106.496mil   1349.866mil   -106.496mil   1349.866mil    -71.063mil  B        270.00 10K            
+R8         FP_0603_RES       1133.465mil   -141.905mil   1133.465mil   -141.905mil   1168.898mil   -141.905mil  T        180.00 15K            
+R7         FP_0603_RES        546.378mil   -391.496mil    546.378mil   -391.496mil    546.378mil   -426.929mil  B         90.00 10K            
+R6         FP_0603_RES        458.378mil   -104.496mil    458.378mil   -104.496mil    458.378mil    -69.063mil  B        270.00 10K            
+R5         FP_0603_RES         888.74mil    -91.535mil     888.74mil    -91.535mil    853.307mil    -91.535mil  B        360.00 10K            
+R4         FP_0603_RES       1878.898mil    -69.882mil   1878.898mil    -69.882mil   1843.465mil    -69.882mil  T        360.00 1K5            
+R2         FP_0603_RES       1860.197mil   -466.536mil   1860.197mil   -466.536mil   1824.764mil   -466.536mil  T          0.00 1K5            
+R1         FP_0603_RES       1809.016mil    -368.11mil   1809.016mil    -368.11mil   1809.016mil   -332.677mil  B        270.00 10K            
+Q1         TR_SOT23          1205.465mil   -176.905mil   1205.465mil   -176.905mil   1205.465mil    -229.15mil  B         90.00 NPN BC847A     
+IC1        WSON_n_SOIC8       1671.22mil   -255.905mil    1671.22mil   -255.905mil    1746.22mil   -370.906mil  B         90.00 ATtiny13       
+D4         LED_IR_5mm         927.126mil   -255.905mil    927.126mil   -255.905mil    927.126mil   -305.905mil  T         90.00 IR vevo        
+D3         led_3mm_standing_R   1125.866mil   -255.905mil   1125.866mil   -255.905mil   1125.866mil   -205.905mil  T         90.00 LED_RED        
+D2         LED_IR_5mm         1323.78mil   -255.905mil    1323.78mil   -255.905mil    1323.78mil   -305.905mil  T         90.00 IR ado         
+D1         SOD-80            1532.378mil    -57.087mil   1532.378mil    -57.087mil   1600.291mil    -57.087mil  T         90.00 ZENER_8.2V     
+C11        FP_0603_CAP_080    915.866mil    -96.496mil    915.866mil    -96.496mil    915.866mil   -131.929mil  T         90.00 150pF          
+C10        FP_3528           1325.748mil   -445.866mil   1325.748mil   -445.866mil   1269.646mil   -445.866mil  T        180.00 100uF          
+C9         FP_0603_CAP_080   1124.465mil   -458.906mil   1124.465mil   -458.906mil   1159.898mil   -458.906mil  B        180.00 150pF          
+C8         FP_0603_CAP_080   1257.465mil   -458.906mil   1257.465mil   -458.906mil   1292.898mil   -458.906mil  B        180.00 150pF          
+C7         FP_1206_CAP_125   1142.677mil    -66.788mil   1142.677mil    -66.788mil   1075.748mil    -66.788mil  T        360.00 22uF           
+C6         FP_0603_CAP_080   1294.465mil   -106.906mil   1294.465mil   -106.906mil   1294.465mil   -142.339mil  B         90.00 100nF          
+C5         FP_0603_CAP_080    666.378mil   -421.496mil    666.378mil   -421.496mil    701.811mil   -421.496mil  B        180.00 100nF          
+C3         FP_0603_CAP_080   1809.016mil   -211.646mil   1809.016mil   -211.646mil   1809.016mil   -247.079mil  B         90.00 100nF          
+C2         CAP_8x11_fekvo    1480.866mil   -255.905mil   1480.866mil   -255.905mil   1480.866mil   -324.803mil  T          0.00 1000uF         
+C1         FP_0603_CAP_080    1020.63mil    -91.535mil    1020.63mil    -91.535mil    985.197mil    -91.535mil  B        360.00 150pF          
+P2         RES_trimmer_helipot_mini_90    604.465mil   -199.496mil    604.465mil   -199.496mil    703.965mil   -199.496mil  T        270.00 POTI           
+

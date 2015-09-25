@@ -1,0 +1,47 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+U2         SOP-4                17370mil      15540mil      17370mil      15540mil  17420.197mil  15673.858mil  T        270.00 KB817D-B       
+R2         FP_0805_RES          17370mil      15790mil      17370mil      15790mil   17330.63mil      15790mil  T          0.00 470R           
+D1         FP_SMA_DO214AC       17280mil  16697.323mil      17280mil      16780mil      17280mil      16780mil  T        270.00 DIODE_big      
+Con1       STEREO_JACK      17781.575mil      15555mil      17880mil      15555mil      17880mil      15555mil  T        180.00 Stereo_Jack    
+RL1        RELAY_MORSE      17111.968mil      16210mil      17610mil      16360mil      17610mil      16060mil  T        180.00 S7001E12W      
+P3         SORKAPOCS_3_P_RM3.81      16860mil  15672.205mil      16860mil      15810mil      16860mil  15534.409mil  T        270.00 Header 3       
+U7         Allegro_hall_sensor  17839.213mil   13493.74mil  17839.213mil   13493.74mil  17790.916mil  13506.681mil  T        345.00 A3122EUA       
+U4         Allegro_hall_sensor  18193.543mil   13493.74mil  18193.543mil   13493.74mil  18144.303mil  13485.058mil  T         10.00 A3122EUA       
+P2         HDR1X2            16747.48mil  17253.898mil   16697.48mil  17253.898mil   16697.48mil  17253.898mil  T        360.00 Header 2       
+P1         HDR1X6               16640mil      13790mil      16640mil      14040mil      16640mil      14040mil  T        270.00 Header 6       
+D3         FP_0805_LED_RED   16859.37mil      14360mil      16820mil      14360mil  16816.063mil      14360mil  T          0.00 LED_GREEN      
+D2         FP_0805_LED_RED   16970.63mil      17280mil      17010mil      17280mil  17013.937mil      17280mil  T        180.00 LED_RED        
+U6         SUPPLY_SOT223        17250mil      17190mil      17250mil      17190mil  17367.126mil  17099.449mil  T        180.00 LD1117xx       
+U3         DIGITAL_SOIC8        16750mil      16990mil      16750mil      16990mil  16651.575mil      17065mil  T          0.00 BD6221         
+R16        FP_0805_RES          17960mil      13700mil      17960mil      13700mil      17960mil   13660.63mil  T         90.00 820R           
+R13        FP_0805_RES          18190mil      13700mil      18190mil      13700mil      18190mil   13660.63mil  T         90.00 820R           
+R12        FP_0805_RES          17650mil      15100mil      17650mil      15100mil   17689.37mil      15100mil  T        180.00 10k            
+R10        FP_0805_RES          16860mil      14270mil      16860mil      14270mil   16820.63mil      14270mil  T          0.00 270R           
+R6         FP_0805_RES          16970mil      17190mil      16970mil      17190mil   17009.37mil      17190mil  T        180.00 270R           
+R4         FP_0805_RES          16800mil      15060mil      16800mil      15060mil   16760.63mil      15060mil  T          0.00 100R           
+R3         FP_0805_RES          16800mil      15160mil      16800mil      15160mil   16760.63mil      15160mil  T          0.00 10K            
+C8         FP_1206_CAP_085      17770mil      17120mil      17770mil      17120mil      17770mil  17053.071mil  T         90.00 10uF           
+C7         FP_0603_CAP_080      17470mil      17140mil      17470mil      17140mil      17470mil  17175.433mil  T        270.00 100nF          
+C6         FP_0805_CAP_060      17860mil      13700mil      17860mil      13700mil      17860mil   13660.63mil  T         90.00 100nF          
+C5         FP_1206_CAP_085      17900mil      17120mil      17900mil      17120mil      17900mil  17186.929mil  T        270.00 10uF           
+C4         FP_0603_CAP_080      17470mil      17290mil      17470mil      17290mil      17470mil  17325.433mil  T        270.00 100nF          
+C3         FP_0805_CAP_060      18090mil      13700mil      18090mil      13700mil      18090mil   13660.63mil  T         90.00 100nF          
+C2         FP_0805_CAP_060      16800mil      15260mil      16800mil      15260mil   16760.63mil      15260mil  T          0.00 100nF          
+C1         FP_0805_CAP_060      17270mil      15000mil      17270mil      15000mil      17270mil   14960.63mil  T         90.00 100nF          
+U5         RFM12B-S1            17810mil      14710mil      17810mil      14710mil  17495.039mil  14946.221mil  T          0.00 RFM12B         
+J1         FP_DC_TAP_ANYA   17570.512mil  16881.457mil  17445.512mil  16781.457mil  17445.512mil  16781.457mil  T        270.00 2.xmm          
+J2         PIN1                 18130mil      14290mil      18130mil      14290mil      18130mil      14290mil  T          0.00 ANT            
+U1         SOIC-SO20_N          16960mil      14710mil      16960mil      14710mil  16780.866mil      14935mil  T          0.00 PIC24F16KA101-I/SO
+D4         FP_SMA_DO214AC       17770mil  16137.323mil      17770mil      16220mil      17770mil      16220mil  T        270.00 DIODE_big      
+R14        FP_0805_RES          17920mil      16480mil      17920mil      16480mil      17920mil   16519.37mil  T        270.00 470R           
+R15        FP_0805_RES          17770mil      16510mil      17770mil      16510mil   17730.63mil      16510mil  T          0.00 10k            
+R5         FP_0805_RES          17050mil      13760mil      17050mil      13760mil      17050mil   13720.63mil  T         90.00 10k            
+R7         FP_0805_RES          17600mil      14280mil      17600mil      14280mil   17639.37mil      14280mil  T        180.00 10k            
+R8         FP_0805_RES          17600mil      14180mil      17600mil      14180mil   17639.37mil      14180mil  T        180.00 10k            
+R9         FP_0805_RES          17600mil      14080mil      17600mil      14080mil   17639.37mil      14080mil  T        180.00 10k            
+R11        FP_0805_RES          17600mil      13980mil      17600mil      13980mil   17639.37mil      13980mil  T        180.00 10k            
+SW1        DIP_switch_4_TH      17300mil      14130mil      17300mil      14130mil      17150mil      14280mil  T        360.00 DIPSW4         
+T1         FET_SOT23            17770mil      16370mil      17770mil      16370mil      17770mil  16317.756mil  T         90.00 Si2306         
+R1         FP_0805_RES          17420mil      15250mil      17420mil      15250mil      17420mil   15210.63mil  T         90.00 10k            
+

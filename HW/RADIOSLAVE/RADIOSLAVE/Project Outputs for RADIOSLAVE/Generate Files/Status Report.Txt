@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [radioslave.PcbDoc]
+   Generated File[Pick Place for radioslave.txt]
+   Generated File[Pick Place for radioslave.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 17:36:37 On 2014.06.20.

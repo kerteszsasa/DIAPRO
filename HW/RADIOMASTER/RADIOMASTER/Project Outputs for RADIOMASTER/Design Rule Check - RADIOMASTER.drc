@@ -1,0 +1,95 @@
+Protel Design System Design Rule Check
+PCB File : E:\pcbdesigns\DIAPRO\RADIOMASTER\RADIOMASTER.PcbDoc
+Date     : 2014.06.23.
+Time     : 0:25:55
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.381mm) (All),(All)
+   Violation between Track (-10.5mm,-7mm)(-3.5mm,0mm)  Keep-Out Layer and 
+                     Via (-5.207mm,-2.794mm) Top Layer to Bottom Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (0mm,10mm)(2mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (0mm,10mm)(2mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (2mm,0mm)(2mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (2mm,0mm)(2mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (2mm,0mm)(12.319mm,-10.319mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (2mm,0mm)(12.319mm,-10.319mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-3.5mm,10mm)(-1.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-3.5mm,10mm)(-1.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-3.5mm,0mm)(-3.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-3.5mm,0mm)(-3.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-10.5mm,-7mm)(-3.5mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-10.5mm,-7mm)(-3.5mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-1.5mm,0mm)(-1.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-1.5mm,0mm)(-1.5mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-1.5mm,0mm)(0mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (-1.5mm,0mm)(0mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-1.5mm,0mm)(0mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (-1.5mm,0mm)(0mm,0mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Top Layer and 
+                     Track (0mm,0mm)(0mm,10mm)  Keep-Out Layer
+   Violation between Region (0 hole(s)) Bottom Layer and 
+                     Track (0mm,0mm)(0mm,10mm)  Keep-Out Layer
+Rule Violations :21
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=1.524mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Via (-9.358mm,-32.148mm) Top Layer to Bottom Layer and 
+                     Pad R3-1(-7.85mm,-32.148mm)  Top Layer
+   Violation between Via (-0.635mm,-2.921mm) Top Layer to Bottom Layer and 
+                     Pad C5-2(-0.992mm,-4.524mm)  Top Layer
+   Violation between Via (10.692mm,-24.004mm) Top Layer to Bottom Layer and 
+                     Pad U5-1(8.786mm,-24.1mm)  Bottom Layer
+Rule Violations :3
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.508mm) (All),((InNamedPolygon('Bottom GND'))  or (InNamedPolygon('Top GND')))
+Rule Violations :0
+
+
+Violations Detected : 24
+Time Elapsed        : 00:00:01

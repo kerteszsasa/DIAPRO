@@ -1,0 +1,41 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+D2         1206_LED_Reversed  -1811.024mil   4571.142mil  -1811.024mil   4571.142mil  -1811.024mil   4634.134mil  T         90.00 LED 0          
+D1         SOT23             -558.662mil   4219.291mil   -558.661mil   4219.291mil   -596.063mil    4181.89mil  B        360.00 BAV99          
+C1         0805_CAP         -1587.402mil   4451.693mil  -1587.402mil   4451.693mil  -1551.968mil   4451.693mil  T        180.00 1uF            
+C2         0805_CAP          -1446.85mil   4637.913mil   -1446.85mil   4637.913mil   -1446.85mil    4602.48mil  T         90.00 1uF            
+C3         0805_CAP         -1434.646mil   4457.992mil  -1434.646mil   4457.992mil  -1434.646mil   4422.559mil  T         90.00 100nF          
+C4         0805_CAP            -78.74mil   4772.559mil     -78.74mil   4772.559mil    -43.307mil   4772.559mil  T        180.00 100nF          
+C5         0805_CAP         -1259.449mil   4824.409mil  -1259.449mil   4824.409mil  -1224.016mil   4824.409mil  T        180.00 10uF           
+C6         0805_CAP          -988.189mil   4512.717mil   -988.189mil   4512.717mil   -952.756mil   4512.717mil  T        180.00 100nF          
+C7         0805_CAP          -543.307mil   4520.591mil   -543.307mil   4520.591mil    -578.74mil   4520.591mil  B        360.00 100nF          
+C8         0805_CAP          -534.567mil   4948.858mil   -534.567mil   4948.858mil   -499.134mil   4948.858mil  B        180.00 100nF          
+C9         0805_CAP          -651.181mil   4750.787mil   -651.181mil   4750.787mil   -651.181mil   4786.221mil  B        270.00 100nF          
+C10        0805_CAP          -388.898mil   4948.858mil   -388.898mil   4948.858mil   -424.331mil   4948.858mil  B        360.00 100nF          
+C11        0805_CAP          -243.228mil   4948.858mil   -243.228mil   4948.858mil   -278.661mil   4948.858mil  B        360.00 100nF          
+R1         0805_RES            -78.74mil   4859.173mil     -78.74mil   4859.173mil   -114.173mil   4859.173mil  T        360.00 10K            
+R2         0805_RES            -78.74mil   4945.787mil     -78.74mil   4945.787mil    -43.307mil   4945.787mil  T        180.00 100            
+R4         0805_RES          -779.528mil   4520.591mil   -779.528mil   4520.591mil   -779.528mil   4485.158mil  B         90.00 10K            
+R6         0805_RES         -1811.024mil   4374.921mil  -1811.024mil   4374.921mil  -1811.024mil   4410.354mil  T        270.00 330            
+TR2        SOT23             -745.669mil   4220.079mil   -745.669mil   4220.079mil   -708.268mil    4257.48mil  B        180.00 BC846          
+U1         MF05A_N           -1578.74mil   4567.047mil   -1578.74mil   4567.047mil  -1625.984mil   4604.449mil  T        360.00 LP3985IM5-3.3  
+U4         NSO16_M           -388.898mil    4736.26mil   -388.898mil    4736.26mil   -563.898mil   4832.717mil  B        270.00 MAX3232CSE     
+U2         SSOP-28           -925.197mil   4764.685mil   -925.197mil   4764.685mil   -791.339mil   4598.346mil  T         90.00 PIC24FJ64GB002-I/SO
+J1         Euroblock_3.5pitch_9P   -767.717mil   4351.299mil   -216.536mil   4351.299mil   -216.536mil   4351.299mil  T        180.00 OUTPUT         
+J2         HDR1X6              74.803mil   4687.126mil     74.803mil   4937.126mil     74.803mil   4937.126mil  T        270.00 PIC_Kit        
+P1         HDR1X4           -1416.142mil   4930.039mil  -1566.142mil   4930.039mil  -1566.142mil   4930.039mil  T        360.00 USB            
+R3         0805_RES         -1168.898mil   4194.882mil  -1168.898mil   4194.882mil  -1133.465mil   4194.882mil  B        180.00 10K            
+TR1        SOT23            -1000.788mil   4219.291mil  -1000.787mil   4219.291mil  -1038.189mil    4181.89mil  B        360.00 BC846          
+U3         TSOP17xx         -1653.543mil   4221.378mil  -1653.543mil   4221.378mil  -1803.543mil   4221.378mil  T        360.00 TSOP1736       
+R5         0805_RES         -1232.284mil   4634.764mil  -1232.283mil   4634.764mil  -1267.716mil   4634.764mil  T        360.00 100            
+P2         HDR1X2           -1467.323mil   4791.063mil  -1517.323mil   4791.063mil  -1517.323mil   4791.063mil  T        360.00 Watchdog       
+P3         HDR1X3           -1210.236mil   4500.905mil  -1110.236mil   4500.905mil  -1110.236mil   4500.905mil  T        180.00 Ext            
+D3         1206_LED_Reversed  -2204.724mil   4571.142mil  -2204.724mil   4571.142mil  -2204.724mil   4634.134mil  T         90.00 LED 1          
+D4         1206_LED_Reversed  -2598.425mil   4571.142mil  -2598.425mil   4571.142mil  -2598.425mil   4634.134mil  T         90.00 LED 2          
+D5         1206_LED_Reversed  -2992.126mil   4571.142mil  -2992.126mil   4571.142mil  -2992.126mil   4634.134mil  T         90.00 LED 3          
+R7         0805_RES         -2204.724mil   4374.921mil  -2204.724mil   4374.921mil  -2204.724mil   4410.354mil  T        270.00 330            
+R8         0805_RES         -2598.425mil   4374.921mil  -2598.425mil   4374.921mil  -2598.425mil   4410.354mil  T        270.00 330            
+R9         0805_RES         -2992.126mil   4374.921mil  -2992.126mil   4374.921mil  -2992.126mil   4410.354mil  T        270.00 330            
+R10        FP_0603_RES      -1011.811mil   4590.945mil  -1011.811mil   4590.945mil  -1047.244mil   4590.945mil  B        360.00 10k            
+R11        FP_0603_RES      -1140.945mil   4590.945mil  -1140.945mil   4590.945mil  -1105.512mil   4590.945mil  B        180.00 10k            
+

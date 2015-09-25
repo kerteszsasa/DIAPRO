@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [EtherIOv3_2.PcbDoc]
+   Generated File[Pick Place for EtherIOv3_2.txt]
+   Generated File[Pick Place for EtherIOv3_2.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 21:44:06 On 2015.07.14.

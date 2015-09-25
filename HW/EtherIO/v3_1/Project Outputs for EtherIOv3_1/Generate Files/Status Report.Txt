@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 21:18:37 On 2015.04.21.
+
+Output: Bill of Materials
+Type  : BOM
+From  : Project [EtherIOv3_1.PrjPcb]
+   Generated File[Bill of Materials-EtherIOv3_1.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 21:18:40 On 2015.04.21.

@@ -1,0 +1,67 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+P2         Euroblock_3.5pitch_9P  -3087.598mil   6856.535mil  -3087.598mil   6856.535mil  -2536.417mil   6856.535mil  T        180.00 Buttons        
+P3         Euroblock_3.5pitch_9P  -1475.394mil   6856.536mil  -1475.394mil   6856.536mil   -924.213mil   6856.536mil  T        180.00 IO             
+J1         FP_DC_TAP_ANYA    -351.772mil    6956.93mil   -451.772mil    7081.93mil   -451.772mil    7081.93mil  T        180.00 2.xmm          
+P1         Header_2X20_pin_2.54  -1141.732mil   8706.929mil  -1141.732mil   8706.929mil  -2091.732mil   8656.929mil  T        360.00 Header 20X2    
+D4         1206_LED_Reversed  -2033.465mil   7269.921mil  -2033.465mil   7269.921mil  -2096.457mil   7269.921mil  B        180.00 LED            
+D3         1206_LED_Reversed  -2033.465mil   7663.622mil  -2033.465mil   7663.622mil  -2096.457mil   7663.622mil  B        180.00 LED            
+D2         1206_LED_Reversed  -2033.465mil   8057.323mil  -2033.465mil   8057.323mil  -2096.457mil   8057.323mil  B        180.00 LED            
+D1         1206_LED_Reversed  -2033.465mil   8451.024mil  -2033.465mil   8451.024mil  -2096.457mil   8451.024mil  B        180.00 LED            
+SW1        SW_TACT_2PIN        59.055mil   7073.071mil     59.055mil   7073.071mil     59.055mil   6945.118mil  T         90.00 SW_tactile_2pin
+C1         FP_0603_CAP_080       -210mil   7227.795mil       -210mil   7227.795mil   -245.433mil   7227.795mil  T          0.00 100nF          
+C2         FP_1206_CAP_085        -80mil   7027.795mil        -80mil   7027.795mil        -80mil   7094.724mil  T        270.00 10uF           
+C3         FP_0603_CAP_080       -210mil   7307.795mil       -210mil   7307.795mil   -174.567mil   7307.795mil  T        180.00 100nF          
+C4         FP_1206_CAP_085       -350mil   7517.795mil       -350mil   7517.795mil       -350mil   7450.866mil  T         90.00 10uF           
+C5         FP_0603_CAP_080       -520mil   7477.795mil       -520mil   7477.795mil   -484.567mil   7477.795mil  T        180.00 100nF          
+C7         FP_0603_CAP_080       -530mil   7947.795mil       -530mil   7947.795mil       -530mil   7912.362mil  T         90.00 100nF          
+C8         FP_0603_CAP_080       -670mil   7947.795mil       -670mil   7947.795mil       -670mil   7912.362mil  T         90.00 100nF          
+JP1        FP_CONN2_TUSKE_254MM      -1590mil   7127.795mil      -1590mil   7177.795mil      -1590mil   7177.795mil  T        180.00 JUMPER         
+JP2        FP_CONN2_TUSKE_254MM      -1150mil   7127.795mil      -1150mil   7177.795mil      -1150mil   7177.795mil  T        180.00 JUMPER         
+K1         Relay_Song_Chuan      -1370mil   7277.795mil      -1370mil   7277.795mil      -1270mil   7077.795mil  T          0.00 Relay_Song Chuan
+R1         FP_0603_RES          -1750mil   7017.795mil      -1750mil   7017.795mil      -1750mil   7053.228mil  T        270.00 1K             
+R2         FP_0603_RES          -1890mil   7027.795mil      -1890mil   7027.795mil      -1890mil   7063.228mil  T        270.00 1K             
+R3         FP_0603_RES      -1771.654mil   8451.024mil  -1771.653mil   8451.024mil   -1736.22mil   8451.024mil  T        180.00 1K             
+R4         FP_0603_RES      -1771.654mil   8057.323mil  -1771.653mil   8057.323mil   -1736.22mil   8057.323mil  T        180.00 1K             
+R5         FP_0603_RES      -1771.654mil   7663.622mil  -1771.653mil   7663.622mil   -1736.22mil   7663.622mil  T        180.00 1K             
+R6         FP_0603_RES      -1771.654mil   7269.921mil  -1771.653mil   7269.921mil   -1736.22mil   7269.921mil  T        180.00 1K             
+R7         FP_0603_RES           -250mil   8527.795mil       -250mil   8527.795mil   -214.567mil   8527.795mil  T        180.00 10K            
+R9         FP_0603_RES      -3464.567mil   7250.236mil  -3464.567mil   7250.236mil  -3464.567mil   7214.803mil  T         90.00 47K            
+R10        FP_0603_RES      -3326.772mil   7250.236mil  -3326.772mil   7250.236mil  -3326.772mil   7214.803mil  T         90.00 47K            
+R11        FP_0603_RES      -3188.977mil   7250.236mil  -3188.977mil   7250.236mil  -3188.977mil   7214.803mil  T         90.00 47K            
+R12        FP_0603_RES      -3051.181mil   7250.236mil  -3051.181mil   7250.236mil  -3051.181mil   7214.803mil  T         90.00 47K            
+R13        FP_0603_RES      -2913.386mil   7250.236mil  -2913.386mil   7250.236mil  -2913.386mil   7214.803mil  T         90.00 47K            
+R14        FP_0603_RES      -2775.591mil   7250.236mil  -2775.591mil   7250.236mil  -2775.591mil   7214.803mil  T         90.00 47K            
+R15        FP_0603_RES      -2637.795mil   7250.236mil  -2637.795mil   7250.236mil  -2637.795mil   7214.803mil  T         90.00 47K            
+R16        FP_0603_RES          -2500mil   7250.236mil      -2500mil   7250.236mil      -2500mil   7214.803mil  T         90.00 47K            
+R17        FP_0603_RES           -700mil   7457.795mil       -700mil   7457.795mil       -700mil   7493.228mil  T        270.00 100R           
+R18        FP_0603_RES      -3464.567mil   7033.701mil  -3464.567mil   7033.701mil  -3464.567mil   6998.268mil  T         90.00 10K            
+R19        FP_0603_RES      -3326.772mil   7033.701mil  -3326.772mil   7033.701mil  -3326.772mil   6998.268mil  T         90.00 10K            
+R20        FP_0603_RES      -3188.977mil   7033.701mil  -3188.977mil   7033.701mil  -3188.977mil   6998.268mil  T         90.00 10K            
+R21        FP_0603_RES      -3051.181mil   7033.701mil  -3051.181mil   7033.701mil  -3051.181mil   6998.268mil  T         90.00 10K            
+R22        FP_0603_RES      -2913.386mil   7033.701mil  -2913.386mil   7033.701mil  -2913.386mil   6998.268mil  T         90.00 10K            
+R23        FP_0603_RES      -2775.591mil   7033.701mil  -2775.591mil   7033.701mil  -2775.591mil   6998.268mil  T         90.00 10K            
+R24        FP_0603_RES      -2637.795mil   7033.701mil  -2637.795mil   7033.701mil  -2637.795mil   6998.268mil  T         90.00 10K            
+R25        FP_0603_RES          -2500mil   7033.701mil      -2500mil   7033.701mil      -2500mil   6998.268mil  T         90.00 10K            
+U1         DIGITAL_SOIC18W      -1210mil   8047.795mil      -1210mil   8047.795mil      -1010mil   8242.283mil  T          0.00 ULN2803A       
+U2         SUPPLY_SOT223         -150mil   7537.795mil       -150mil   7537.795mil   -240.551mil   7420.669mil  T         90.00 LD1117xx       
+U3         DIGITAL_SOIC16    -670.525mil   7705.115mil   -670.525mil   7705.115mil   -495.525mil   7799.603mil  T        360.00 MAX3232CSE     
+C9         FP_0603_CAP_080       -780mil   7937.795mil       -780mil   7937.795mil       -780mil   7902.362mil  T         90.00 100nF          
+R8         FP_0603_RES             50mil   7727.795mil         50mil   7727.795mil     14.567mil   7727.795mil  T          0.00 10k            
+C12        FP_1210_CAP_N          -60mil   8037.795mil        -60mil   8037.795mil     -2.913mil   8037.795mil  T        180.00 10 uF          
+C13        FP_1210_CAP_N          -60mil   8177.795mil        -60mil   8177.795mil     -2.913mil   8177.795mil  T        180.00 10 uF          
+C14        FP_1210_CAP_N          -60mil   8317.795mil        -60mil   8317.795mil     -2.913mil   8317.795mil  T        180.00 10 uF          
+C15        FP_0603_CAP_080       -260mil   8047.795mil       -260mil   8047.795mil   -295.433mil   8047.795mil  T        360.00 10nF           
+C24        FP_1210_CAP_N          -60mil   7897.795mil        -60mil   7897.795mil     -2.913mil   7897.795mil  T        180.00 10 uF          
+R33        FP_0603_RES           -450mil   8437.795mil       -450mil   8437.795mil   -485.433mil   8437.795mil  T        360.00 47k            
+R34        FP_0603_RES            -70mil   8447.795mil        -70mil   8447.795mil   -105.433mil   8447.795mil  T        360.00 47k            
+R35        FP_0603_RES           -720mil   8257.795mil       -720mil   8257.795mil       -720mil   8222.362mil  T         90.00 47k            
+R36        FP_0603_RES           -400mil   8047.795mil       -400mil   8047.795mil   -435.433mil   8047.795mil  T        360.00 47k            
+T1         FET_SOT23             -580mil   8257.795mil       -580mil   8257.795mil   -632.244mil   8257.795mil  T          0.00 PMBF170        
+T2         FET_SOT23             -860mil   8107.795mil       -860mil   8107.795mil   -912.244mil   8107.795mil  T          0.00 PMBF170        
+T7         FET_SOT23             -280mil   8367.795mil       -280mil   8367.795mil   -227.756mil   8367.795mil  T        180.00 PMBF170        
+T8         FET_SOT23             -860mil   8257.795mil       -860mil   8257.795mil   -912.244mil   8257.795mil  T          0.00 PMBF170        
+U5         GATE_SOT23-5      -339.469mil   7937.795mil       -340mil   7937.795mil   -287.756mil   7900.394mil  T        180.00 74AHC1G14      
+C16        FP_0603_CAP_080       -600mil   7947.795mil       -600mil   7947.795mil       -600mil   7912.362mil  T         90.00 100nF          
+C6         FP_0603_CAP_080       -450mil   8527.795mil       -450mil   8527.795mil   -485.433mil   8527.795mil  T        360.00 100nF          
+

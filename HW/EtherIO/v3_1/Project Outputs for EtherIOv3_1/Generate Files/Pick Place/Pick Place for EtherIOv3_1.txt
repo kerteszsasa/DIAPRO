@@ -1,0 +1,111 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+DN1        DIODE_SOT23_serial       -400mil       2850mil       -400mil       2850mil   -452.244mil   2812.599mil  B        180.00 BAR43S         
+R25        FP_0805_RES          -3810mil       3315mil      -3810mil       3315mil      -3810mil    3275.63mil  B         90.00 10k            
+C38        FP_0805_CAP_125      -4010mil       3255mil      -4010mil       3255mil      -4010mil    3215.63mil  T         90.00 100nF          
+U10        DIGITAL_SOIC8        -3730mil       3345mil      -3730mil       3345mil  -3631.575mil       3270mil  T        180.00 MB85RC16PNF    
+SW1        BUTTON_6X6_90deg      -4185mil       3355mil      -4185mil       3355mil      -4234mil     3266.5mil  T        270.00 SW_tactile_2pin
+R24        0805_RES              -135mil   2670.433mil       -135mil   2670.433mil       -135mil   2705.866mil  B        270.00 RES            
+D3         Osram_sideled         -115mil       3130mil       -115mil       3130mil       -115mil       3180mil  T         90.00 LED_RED        
+R5         0805_RES             -1015mil       3280mil      -1015mil       3280mil      -1015mil   3315.433mil  B        270.00 RES            
+R2         0805_RES             -1015mil   3130.433mil      -1015mil   3130.433mil      -1015mil       3095mil  B         90.00 RES            
+U4         TSOP17xx              -165mil       1945mil       -165mil       1945mil       -165mil       1795mil  T         90.00 TSOP1736       
+R23        1206_4xRES_ARRAY  -1180.748mil   3498.386mil  -1133.504mil   3536.772mil  -1133.504mil   3536.772mil  T        180.00 4x Res Array   
+J9         Euroblock_3.5pitch_5P  -1239.409mil       3640mil      -1515mil       3640mil      -1515mil       3640mil  T        360.00 Infra OUT      
+C1         ELECTROLIT_CAP_F80      -3370mil       2080mil      -3370mil       2080mil  -3470.394mil       2080mil  T          0.00 100uF_25V      
+C2         ELECTROLIT_CAP_J10      -3365mil       2440mil      -3365mil       2440mil  -3540.197mil       2440mil  T        360.00 1000uF_6V3     
+C3         0805_CAP         -3515.433mil       2920mil  -3515.433mil       2920mil  -3550.866mil       2920mil  B        360.00 CAP            
+C4         0805_CAP         -3515.433mil       2995mil  -3515.433mil       2995mil  -3550.866mil       2995mil  B        360.00 CAP            
+C5         0805_CAP             -2735mil       3005mil      -2735mil       3005mil      -2735mil   3040.433mil  B        270.00 CAP            
+C6         0805_CAP             -2535mil       3010mil      -2535mil       3010mil      -2535mil   3045.433mil  B        270.00 CAP            
+C7         0805_CAP         -3515.433mil       2715mil  -3515.433mil       2715mil  -3550.866mil       2715mil  B        360.00 CAP            
+C8         0805_CAP         -3515.433mil       2790mil  -3515.433mil       2790mil  -3550.866mil       2790mil  B        360.00 CAP            
+C9         0805_CAP             -3040mil       2200mil      -3040mil       2200mil      -3040mil   2164.567mil  B         90.00 CAP            
+C10        0805_CAP             -3040mil       2040mil      -3040mil       2040mil      -3040mil   2075.433mil  B        270.00 CAP            
+C11        0805_CAP             -3915mil   2929.567mil      -3915mil   2929.567mil      -3915mil       2965mil  B        270.00 CAP            
+C12        0805_CAP             -3915mil   2760.433mil      -3915mil   2760.433mil      -3915mil   2795.866mil  B        270.00 CAP            
+C13        0805_CAP         -3745.433mil       3110mil  -3745.433mil       3110mil      -3710mil       3110mil  B        180.00 CAP            
+C33        0805_CAP             -1150mil   1894.567mil      -1150mil   1894.567mil      -1150mil       1930mil  B        270.00 CAP            
+C34        0805_CAP         -1185.433mil   2074.134mil  -1185.433mil   2074.134mil  -1220.866mil   2074.134mil  B        360.00 CAP            
+C35        0805_CAP             -1260mil   1893.701mil      -1260mil   1893.701mil      -1260mil   1929.134mil  B        270.00 CAP            
+C36        0805_CAP         -1339.567mil   2074.134mil  -1339.567mil   2074.134mil  -1304.134mil   2074.134mil  B        180.00 CAP            
+C14        0805_CAP             -2600mil   2235.433mil      -2600mil   2235.433mil      -2600mil   2270.866mil  B        270.00 CAP            
+C15        0805_CAP         -2299.567mil       2260mil  -2299.567mil       2260mil      -2335mil       2260mil  B        360.00 CAP            
+C16        0805_CAP             -2360mil   2564.567mil      -2360mil   2564.567mil      -2360mil   2529.134mil  B         90.00 CAP            
+C17        0805_CAP         -2565.433mil       2600mil  -2565.433mil       2600mil      -2530mil       2600mil  B        180.00 CAP            
+C18        0805_CAP             -2275mil   2519.567mil      -2275mil   2519.567mil      -2275mil       2555mil  B        270.00 CAP            
+C19        0805_CAP         -2604.567mil       2520mil  -2604.567mil       2520mil  -2569.134mil       2520mil  B        180.00 CAP            
+C37        0805_CAP             -1385mil   1894.567mil      -1385mil   1894.567mil      -1385mil       1930mil  B        270.00 CAP            
+C20        0805_CAP         -2300.433mil       2400mil  -2300.433mil       2400mil  -2335.866mil       2400mil  B        360.00 CAP            
+C21        0805_CAP             -2450mil   2559.567mil      -2450mil   2559.567mil      -2450mil   2524.134mil  B         90.00 CAP            
+C22        0805_CAP             -2480mil   2234.567mil      -2480mil   2234.567mil      -2480mil       2270mil  B        270.00 CAP            
+C23        0805_CAP              -265mil       3525mil       -265mil       3525mil   -300.433mil       3525mil  B          0.00 CAP            
+D1         0805_LED             -3160mil   1874.567mil      -3160mil   1874.567mil      -3160mil   1839.134mil  T         90.00 PWR            
+D2         DSO-C2/X2.3          -3635mil   2213.583mil      -3635mil   2213.583mil      -3635mil   2302.165mil  B        270.00 D Schottky     
+J7         Euroblock_3.5pitch_6P  -2125.512mil       3640mil      -2470mil       3640mil      -2470mil       3640mil  T        360.00 Relays         
+J2         KLD-0202          -4023.74mil   2205.512mil      -4445mil       2300mil  -3909.567mil       2300mil  T        360.00 PWR2.5         
+J1         Euroblock_3.5pitch_9P  -2914.409mil   1634.961mil  -2363.228mil   1634.961mil  -2363.228mil   1634.961mil  T        180.00 BUTTONS        
+J4         Euroblock_3.5pitch_9P  -3288.819mil       3640mil      -3840mil       3640mil      -3840mil       3640mil  T        360.00 LEDS           
+J5         LU1T516-43           -3958mil       2845mil      -4355mil       2845mil      -4233mil       3095mil  T         90.00 EthernetConnector
+J10        Euroblock_3.5pitch_6P  -1740.512mil       1635mil  -1396.024mil       1635mil  -1396.024mil       1635mil  T        180.00 RS232          
+K1         RSY-12               -2405mil       3400mil      -2405mil       3300mil      -2605mil       3300mil  T         90.00 REL0           
+K2         RSY-12               -1890mil       3400mil      -1890mil       3300mil      -1690mil       3500mil  T         90.00 REL1           
+L1         INDP127127X85N       -3970mil       1715mil      -3970mil       1715mil  -4178.661mil       1715mil  T          0.00 100uH          
+P1         IDC2.54-V10D         -1325mil       2660mil      -1325mil       2660mil      -1525mil       2610mil  T        360.00 Header 5X2     
+R1         0805_RES             -3155mil       1965mil      -3155mil       1965mil      -3155mil   2000.433mil  B        270.00 RES            
+R6         0805_RES             -2060mil       2360mil      -2060mil       2360mil      -2060mil   2395.433mil  T        270.00 RES            
+R7         1206_4XRES_ARRAY  -3612.756mil   3501.614mil      -3660mil       3540mil      -3660mil       3540mil  B          0.00 4x Res Array   
+R8         1206_4XRES_ARRAY  -2922.756mil   3481.614mil      -2970mil       3520mil      -2970mil       3520mil  B        360.00 4x Res Array   
+R9         0805_RES         -4100.433mil       2795mil  -4100.433mil       2795mil      -4065mil       2795mil  B        180.00 RES            
+R10        0805_RES             -4100mil       2880mil      -4100mil       2880mil  -4064.567mil       2880mil  B        180.00 RES            
+R11        0805_RES             -2615mil       1955mil      -2615mil       1955mil  -2579.567mil       1955mil  T        180.00 RES            
+R12        0805_RES         -3515.433mil       2920mil  -3515.433mil       2920mil  -3550.866mil       2920mil  T        360.00 RES            
+R13        0805_RES         -3515.433mil       2995mil  -3515.433mil       2995mil  -3550.866mil       2995mil  T        360.00 RES            
+R15        0805_RES             -3080mil       2340mil      -3080mil       2340mil  -3115.433mil       2340mil  T          0.00 RES            
+R16        0805_RES             -1195mil       2220mil      -1195mil       2220mil  -1159.567mil       2220mil  B        180.00 RES            
+R17        0805_RES         -3515.433mil       2715mil  -3515.433mil       2715mil  -3550.866mil       2715mil  T        360.00 RES            
+R18        0805_RES         -3515.433mil       2790mil  -3515.433mil       2790mil  -3550.866mil       2790mil  T        360.00 RES            
+S1         SPST-2                -940mil       2270mil       -940mil       2270mil   -812.047mil       2270mil  T        180.00 SW-PB          
+U1         TO-263-5L        -3859.803mil       1755mil      -3910mil       1755mil  -3663.937mil   1888.858mil  B        180.00 TS2576         
+U8         SOIC127P1030X265-18N      -1320mil       3325mil      -1320mil       3325mil      -1120mil   3134.055mil  B         90.00 ULN2803A       
+U2         QFP50P1600X1600X160-100N      -2460mil       2400mil      -2460mil       2400mil   -2223.78mil    2703.15mil  T        270.00 LM3S6911-IQC   
+U3         SOIC127P1030X265-18N      -3275mil   3294.055mil      -3275mil   3294.055mil      -3075mil    3103.11mil  B         90.00 ULN2803A       
+U9         NSO16_M              -1310mil   1964.134mil      -1310mil   1964.134mil      -1135mil   2060.591mil  T        270.00 MAX3232CSE     
+X1         CRYSTAL_LOW          -2540mil       2990mil      -2540mil       2990mil  -2636.063mil       2990mil  T          0.00 CRYSTAL        
+X2         CRYSTAL_LOW          -2920mil       2100mil      -2920mil       2100mil      -2920mil   2196.063mil  T        270.00 CRYSTAL        
+R14        0805_RES             -3120mil   2200.433mil      -3120mil   2200.433mil      -3120mil       2165mil  B         90.00 RES            
+W4         JUMPER               -2795mil       3275mil      -2795mil       3275mil      -2745mil       3275mil  T        180.00 Jumper         
+W3         JUMPER               -2755mil       3455mil      -2755mil       3455mil      -2755mil       3505mil  T        270.00 Jumper         
+W5         JUMPER               -1950mil       3170mil      -1950mil       3170mil      -1900mil       3170mil  T        180.00 Jumper         
+W6         JUMPER               -1730mil       3170mil      -1730mil       3170mil      -1680mil       3170mil  T        180.00 Jumper         
+C27        0805_CAP             -2095mil       1785mil      -2095mil       1785mil  -2130.433mil       1785mil  T          0.00 CAP            
+C24        Goldcap_1F        -463.425mil       2640mil   -463.425mil       2640mil       -365mil       2640mil  T        180.00 ELKO           
+C25        0805_CAP             -2040mil       1935mil      -2040mil       1935mil      -2040mil   1899.567mil  T         90.00 CAP            
+C26        0805_CAP             -2135mil       1935mil      -2135mil       1935mil      -2135mil   1899.567mil  T         90.00 CAP            
+R21        0805_RES              -540mil       2815mil       -540mil       2815mil       -540mil   2850.433mil  B        270.00 RES            
+R4         0805_RES         -2270.433mil       1820mil  -2270.433mil       1820mil  -2305.866mil       1820mil  B        360.00 RES            
+R3         0805_RES         -2270.433mil       1740mil  -2270.433mil       1740mil  -2305.866mil       1740mil  B        360.00 RES            
+U6         MSOP8                -2165mil       1940mil      -2165mil       1940mil  -2077.402mil   1978.386mil  B        180.00 MCP79411       
+X3         CRYSTAL_MINI      -2094.37mil       2045mil   -2094.37mil       2045mil      -2055mil       2045mil  B        180.00 CRYSTAL        
+P2         HDR1X7                -715mil       1775mil       -415mil       1775mil       -415mil       1775mil  T        180.00 Extension      
+J3         microSD          -1188.976mil   3139.724mil      -1250mil   3016.693mil      -1250mil   3016.693mil  T         90.00 MicroSD        
+U7         NSO16_M              -1775mil       1965mil      -1775mil       1965mil      -1600mil   2061.457mil  T        270.00 MAX3232CSE     
+C32        0805_CAP             -1850mil   1895.433mil      -1850mil   1895.433mil      -1850mil   1930.866mil  B        270.00 CAP            
+C31        0805_CAP         -1804.567mil       2075mil  -1804.567mil       2075mil  -1769.134mil       2075mil  B        180.00 CAP            
+C30        0805_CAP             -1725mil   1894.567mil      -1725mil   1894.567mil      -1725mil       1930mil  B        270.00 CAP            
+C29        0805_CAP         -1650.433mil       2075mil  -1650.433mil       2075mil  -1685.866mil       2075mil  B        360.00 CAP            
+C28        0805_CAP             -1615mil   1895.433mil      -1615mil   1895.433mil      -1615mil   1930.866mil  B        270.00 CAP            
+R22        0805_RES             -1230mil       2355mil      -1230mil       2355mil      -1230mil   2390.433mil  B        270.00 RES            
+J6         JACK1.27-2H8B         -500mil   3469.764mil       -500mil       3955mil       -325mil   3394.764mil  T        180.00 RJ45-PanBeam   
+W2         Jumper                -475mil   3154.764mil       -475mil   3154.764mil       -425mil   3154.764mil  T        180.00 Jumper         
+W1         Jumper                -700mil   3154.764mil       -700mil   3154.764mil       -650mil   3154.764mil  T        180.00 Jumper         
+R20        0805_RES              -330mil   3164.764mil       -330mil   3164.764mil       -330mil   3129.331mil  B         90.00 RES            
+U5         NSO14_N           -501.378mil   3653.819mil   -501.378mil   3653.819mil   -595.866mil   3503.819mil  B        360.00 MAX491ESD      
+R19        0805_RES              -755mil   3339.331mil       -755mil   3339.331mil       -755mil   3303.898mil  B         90.00 RES            
+J8         Euroblock_3.5pitch_6P   -776.693mil       1635mil   -432.205mil       1635mil   -432.205mil       1635mil  T        180.00 PB audio IN/Extension
+W8         0603_3WAY_JUMPER       -720mil       1930mil       -720mil   1964.449mil       -720mil   1998.898mil  B        270.00 A-/SCL         
+W9         0603_3WAY_JUMPER       -820mil       1930mil       -820mil   1964.449mil       -820mil   1998.898mil  B        270.00 GND/U0TX       
+W10        0603_3WAY_JUMPER       -920mil       1930mil       -920mil   1964.449mil       -920mil   1998.898mil  B        270.00 B+/U0RX        
+W11        0603_3WAY_JUMPER      -1015mil       1930mil      -1015mil   1964.449mil      -1015mil   1998.898mil  B        270.00 B-/VCC5V       
+W7         0603_3WAY_JUMPER       -615mil   1930.551mil       -615mil       1965mil       -615mil   1999.449mil  B        270.00 A+/SDA         
+

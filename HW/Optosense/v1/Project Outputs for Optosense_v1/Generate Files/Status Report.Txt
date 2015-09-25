@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 21:44:13 On 2015.02.26.
+
+Output: Bill of Materials
+Type  : BOM
+From  : Project [Optosense_v1.PrjPcb]
+   Generated File[Bill of Materials-Optosense_v1.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 21:44:22 On 2015.02.26.

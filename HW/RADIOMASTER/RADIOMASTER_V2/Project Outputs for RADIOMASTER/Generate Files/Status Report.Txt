@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [RADIOMASTER.PcbDoc]
+   Generated File[Pick Place for RADIOMASTER.txt]
+   Generated File[Pick Place for RADIOMASTER.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 12:37:23 On 2014.06.30.

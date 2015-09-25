@@ -1,0 +1,57 @@
+Diapro ASP-LEDBoard
+
+Tulajdonágok: 	- 4 LED 5V-ról, (LED 0-3)
+		- 1 LED 12 Voltról (LED 4)
+		- 1 Gomb (BTN)
+		- 2 12V-os relé
+		- 1 PVM a két 5V-os motor szabályzásához (a két motort elég egyszerre kezelni)
+		- Motork fordulatainak érzékelése (2 motor külün-külön)
+		- BSS logic output érzékelése
+Az elektronika 5V-ról vagy a 12V-ról működik. Az 5V-os működés esetén mivel nincsen 12V, sem a LED4 és a két 12V-os relé sem kell, hogy működjenek.
+		- 1 (v2) jumper, hogy az 5V-ról vegye az 5V-ot, vagy a 12 V-ról alakítsa át.
+
+
+		Pad-ek: 
+			- 2 db 12V
+			- 2 db 5V
+			- 6 db  2x3 db a két ventillátorhoz
+			- 2 db a gombhoz
+			- 2 db a ledhez
+			- 2 db a BSS logic outputjához
+			- 4 db a 2 db 12V-os reléhez
+
+
+
+Szoftver:
+Két féle működés (ha nehéz detektálni, akkor két külön szoftver is lehet)
+(Ledek balról jobbra 0-3, 12V-os LED=LED4)
+	1: ASP100: (ha 5V a táp)
+		- LED 1 világít ha van táp és a ventillátorok forognak. Ha a ventillátok közül valamelyik nem forog, akkor villog. 
+		- LED 2 villog, kivéve, hogyha a BSS logic outja nem TRUE, mert akkor világít.
+
+	2: ASP100P:(ha 12V a táp)
+		- LED 0 világít ha van táp és a ventillátorok forognak. Ha a ventillátok közül valamelyik nem forog, akkor villog. 
+		- LED 1 villog, kivéve, hogyha a BSS logic outja nem TRUE, mert akkor világít.
+		- LED 2 visszajelzi az "A" relé állapotát
+		- LED 3 Visszajelzi a "B" relé állapotát
+		- LED 4 visszajelzi a rendszer ki-bekapcsolt állapotát.
+
+		Gomb és relék működése:
+		A táp megjelenésekor a rendszer kikapcsolt állaptban van. (Mindkét relé elenged, a LED 4 nem világít)
+		A BTN megnyomására kikapcsolt állapotban az "A" relé behúz (a rendszer bekapcsolt állapotba kerül - LED 4 világít), és a beállított időzítés eltelte után a "B" relé is behúz.
+		A BTN megnyomására bekapcsolt állapotban az "B" relé elenged (a rendszer kikapcsolt állapotba kerül - LED 4 kikapcsol), és a beállított időzítés eltelte után az "A" relé is elenged.
+
+		- Ha az időzítés letelte előtt a BTN-t megnyomják, akkor a rendszer visszatér az előző állapotába. Ha kikapcsolás közben nyomják meg (vagyis a "B" relé már elengedett) akkor a "B" relé és a LED 4 is visszakapcsol, a rendszer bekapcsolt állapotba kerül.
+	
+
+		
+
+
+
+	 
+
+
+
+
+
+

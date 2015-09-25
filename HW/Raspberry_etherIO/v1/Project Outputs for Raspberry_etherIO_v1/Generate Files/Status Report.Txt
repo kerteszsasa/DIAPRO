@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [Raspberry_etherIO_v1.PcbDoc]
+   Generated File[Pick Place for Raspberry_etherIO_v1.txt]
+   Generated File[Pick Place for Raspberry_etherIO_v1.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 23:57:37 On 2015.03.26.

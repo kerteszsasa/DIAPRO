@@ -1,0 +1,88 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+P1         HEADER_10_BOX     1794.488mil   1821.653mil   1594.488mil   1771.653mil   1594.488mil   1771.653mil  T        360.00 Header 5X2     
+R23        FP_0603_RES           3245mil       2245mil       3245mil       2245mil   3209.567mil       2245mil  T          0.00 1k             
+R24        FP_0603_RES           3245mil       2315mil       3245mil       2315mil   3209.567mil       2315mil  T          0.00 1k             
+R22        FP_0603_RES           3245mil       2385mil       3245mil       2385mil   3209.567mil       2385mil  T          0.00 1k             
+R21        FP_0603_RES           3245mil       2455mil       3245mil       2455mil   3209.567mil       2455mil  T          0.00 1k             
+R26        FP_0603_RES           2695mil       2750mil       2695mil       2750mil       2695mil   2714.567mil  T         90.00 1k             
+R31        FP_0603_RES           2625mil       2750mil       2625mil       2750mil       2625mil   2714.567mil  T         90.00 1k             
+R29        FP_0603_RES           2250mil       2880mil       2250mil       2880mil   2214.567mil       2880mil  T        360.00 1k             
+R27        FP_0603_RES           2720mil       4315mil       2720mil       4315mil   2684.567mil       4315mil  T        360.00 1k             
+R8         FP_0603_RES           2900mil       4300mil       2900mil       4300mil   2864.567mil       4300mil  T          0.00 1k             
+C15        FP_0603_CAP_080       2650mil       3040mil       2650mil       3040mil       2650mil   3004.567mil  T         90.00 100nF          
+C12        FP_0603_CAP_080       2650mil       3180mil       2650mil       3180mil       2650mil   3144.567mil  T         90.00 100nF          
+C6         FP_0603_CAP_080       2820mil       3440mil       2820mil       3440mil   2855.433mil       3440mil  T        180.00 100nF          
+C5         FP_0603_CAP_080       2650mil       3320mil       2650mil       3320mil       2650mil   3355.433mil  T        270.00 100nF          
+C21_e      CAP_ALU_ELKO_10D_10,5H    275.591mil   2716.535mil    275.591mil   2716.535mil    114.173mil   2716.535mil  T        360.00 220uF 50V      
+P7         Sorkapocs_3P_5mm   3360.354mil   2795.276mil   3360.354mil   2795.276mil   3360.354mil   2992.126mil  T        270.00 Header 3       
+P4         3.96mm_2P__90°_NCW396-02R   2356.417mil   4409.449mil   2356.417mil   4409.449mil    2434.37mil   4409.449mil  T        360.00 Motor          
+P6         Sorkapocs_8P_5mm   3360.354mil   3976.378mil   3360.354mil   3976.378mil   3360.354mil   4665.354mil  T        270.00 Header 8       
+U10        DIGITAL_SOIC16    2856.535mil   3184.331mil   2856.535mil   3184.331mil   2762.047mil   3359.331mil  T         90.00 MAX3232CSE     
+C7         FP_0603_CAP_080       2950mil       3440mil       2950mil       3440mil   2914.567mil       3440mil  T        360.00 100nF          
+U9         GATE_SOT23-5          2725mil   4455.532mil       2725mil       4455mil   2762.402mil   4507.244mil  T        270.00 SN74AHC1G08    
+U5         GATE_SOT23-5      2900.032mil   4454.481mil   2900.032mil    4453.95mil   2937.433mil   4506.194mil  T        270.00 SN74AHC1G08    
+R30        FP_0603_RES           2725mil       4725mil       2725mil       4725mil   2760.433mil       4725mil  T        180.00 1k             
+R19        FP_0603_RES           2901mil       4580mil       2901mil       4580mil   2936.433mil       4580mil  T        180.00 47k            
+R18        FP_0603_RES           2902mil       4655mil       2902mil       4655mil   2937.433mil       4655mil  T        180.00 1k             
+R17        FP_0603_RES           2950mil       4130mil       2950mil       4130mil   2985.433mil       4130mil  T        180.00 47k            
+R16        FP_0603_RES           2950mil       4060mil       2950mil       4060mil   2985.433mil       4060mil  T        180.00 47k            
+R15        FP_0603_RES           2725mil       4581mil       2725mil       4581mil   2760.433mil       4581mil  T        180.00 47k            
+R14        FP_0603_RES           2726mil       4654mil       2726mil       4654mil   2761.433mil       4654mil  T        180.00 1k             
+R13        FP_0603_RES           2950mil       3920mil       2950mil       3920mil   2985.433mil       3920mil  T        180.00 47k            
+R12        FP_0603_RES           2950mil       3710mil       2950mil       3710mil   2985.433mil       3710mil  T        180.00 47k            
+R11        FP_0603_RES           2900mil       4725mil       2900mil       4725mil   2864.567mil       4725mil  T        360.00 1k             
+P5         jst-s4b-xh-a      2868.228mil    4881.89mil   2868.228mil    4881.89mil   2986.338mil    4881.89mil  T        360.00 Header 4       
+C16        FP_0603_CAP_080       2950mil       3780mil       2950mil       3780mil   2914.567mil       3780mil  T        360.00 100nF          
+C3         FP_0603_CAP_080       2950mil       4200mil       2950mil       4200mil   2914.567mil       4200mil  T        360.00 100nF          
+C2         FP_0603_CAP_080       2950mil       3990mil       2950mil       3990mil   2914.567mil       3990mil  T        360.00 100nF          
+C1         FP_0603_CAP_080       2950mil       3850mil       2950mil       3850mil   2914.567mil       3850mil  T        360.00 100nF          
+T6         FET_SOT23             2630mil       3590mil       2630mil       3590mil   2682.244mil   3627.402mil  T          0.00 PMBF170        
+T5         FET_SOT23         2632.036mil   3723.032mil   2632.036mil   3723.032mil    2684.28mil   3760.434mil  T          0.00 PMBF170        
+R96        FP_0603_RES           2240mil       3470mil       2240mil       3470mil   2204.567mil       3470mil  T        360.00 330            
+R10        FP_0603_RES           2380mil       2880mil       2380mil       2880mil   2415.433mil       2880mil  T        180.00 1k             
+R28        FP_0603_RES           2240mil       2150mil       2240mil       2150mil       2240mil   2185.433mil  T        270.00 47k            
+R6         FP_0603_RES           2250mil       2960mil       2250mil       2960mil   2285.433mil       2960mil  T        180.00 47k            
+R4         FP_0603_RES           2750mil       3590mil       2750mil       3590mil       2750mil   3554.567mil  T         90.00 47k            
+R3         FP_0603_RES           2310mil       2147mil       2310mil       2147mil       2310mil   2111.567mil  T         90.00 47k            
+R2         FP_0603_RES           2440mil       3470mil       2440mil       3470mil   2404.567mil       3470mil  T        360.00 330            
+P3         Sorkapocs_2P_5mm   2356.417mil    4960.63mil   2356.417mil    4960.63mil   2257.992mil    4960.63mil  T          0.00 Motor          
+P2         Sorkapocs_2P_5mm    624.134mil    4960.63mil    624.134mil    4960.63mil    525.709mil    4960.63mil  T        360.00 Header 2       
+R1         FP_0603_RES           2750mil       3730mil       2750mil       3730mil       2750mil   3694.567mil  T         90.00 47k            
+U4         OPTO_SOP-4        2244.094mil   3681.102mil   2244.095mil   3681.102mil   2193.898mil   3554.244mil  T         90.00 VOM1271T       
+U2         OPTO_SOP-4        2440.945mil   3681.102mil   2440.945mil   3681.102mil   2390.748mil   3554.244mil  T         90.00 VOM1271T       
+T4         FET_D2-PAK_7      1805.236mil   3625.197mil   1805.236mil   3425.197mil   1955.236mil   3425.197mil  T          0.00  IRFS7730PBF   
+T3         FET_D2-PAK_7      1175.315mil   3625.197mil   1175.315mil   3425.197mil   1325.315mil   3425.197mil  T          0.00  IRFS7730PBF   
+T2         FET_D2-PAK_7      1805.236mil   4530.709mil   1805.236mil   4330.709mil   1955.236mil   4330.709mil  T          0.00  IRFS7730PBF   
+U3         LQFP64_N              2700mil       2340mil       2700mil       2340mil   2552.362mil   2121.496mil  T         90.00 STM32F103RET6  
+U1         DIGITAL_SOIC8         2290mil       3170mil       2290mil       3170mil       2215mil   3071.575mil  T         90.00 TC4427         
+T1         FET_D2-PAK_7      1175.315mil   4530.709mil   1175.315mil   4330.709mil   1325.315mil   4330.709mil  T          0.00  IRFS7730PBF   
+R5         FP_0603_RES           3100mil       2040mil       3100mil       2040mil       3100mil   2004.567mil  T         90.00 47k            
+R7         FP_0603_RES           2380mil       2960mil       2380mil       2960mil   2344.567mil       2960mil  T        360.00 47k            
+C28        FP_0603_CAP_080       3020mil       2040mil       3020mil       2040mil       3020mil   2004.567mil  T         90.00 100nF          
+C11        FP_0603_CAP_080       3020mil       2180mil       3020mil       2180mil       3020mil   2144.567mil  T         90.00 100nF          
+C10        FP_0603_CAP_080       3010mil       2550mil       3010mil       2550mil       3010mil   2514.567mil  T         90.00 100nF          
+C9         FP_0603_CAP_080       2500mil       2650mil       2500mil       2650mil   2535.433mil       2650mil  T        180.00 100nF          
+C8         FP_0603_CAP_080       2380mil       2150mil       2380mil       2150mil       2380mil   2185.433mil  T        270.00 100nF          
+C22_e      CAP_ALU_ELKO_10D_10,5H    275.591mil   2283.465mil    275.591mil   2283.465mil    437.008mil   2283.465mil  T        360.00 220uF 50V      
+D22        DIODE_SMC         1125.047mil   2366.205mil   1122.047mil   2362.205mil   1125.047mil   2516.205mil  T        270.00 SS36           
+D23        DIODE_SMC          180.165mil   3173.291mil    177.165mil   3169.291mil    180.165mil   3323.291mil  T        270.00 SS36           
+C4         CAP_ALU_ELKO_10D_10,5H   1240.158mil   2795.276mil   1240.158mil   2795.276mil    1078.74mil   2795.276mil  T        180.00 1000uF 10V     
+C17        FP_1206_CAP_125    354.331mil   2007.874mil    354.331mil   2007.874mil     421.26mil   2007.874mil  T        180.00 47uF           
+C18        FP_1206_CAP_125   1377.953mil   2519.685mil   1377.953mil   2519.685mil   1311.024mil   2519.685mil  T        360.00 47uF           
+C20        FP_0603_CAP_080   1358.268mil    2421.26mil   1358.268mil    2421.26mil   1393.701mil    2421.26mil  T        180.00 100nF          
+C21        FP_0603_CAP_080    393.701mil   1909.449mil    393.701mil   1909.449mil    358.268mil   1909.449mil  T          0.00 100nF          
+C29        FP_0603_CAP_080   1889.764mil    2539.37mil   1889.764mil    2539.37mil   1854.331mil    2539.37mil  T        360.00 100nF          
+C30        FP_1206_CAP_085   2007.874mil   2716.535mil   2007.874mil   2716.535mil   2007.874mil   2649.606mil  T         90.00 10uF           
+C31        FP_0603_CAP_080   1751.968mil    2539.37mil   1751.968mil    2539.37mil   1787.402mil    2539.37mil  T        180.00 100nF          
+C32        FP_1206_CAP_085   1614.173mil   2716.535mil   1614.173mil   2716.535mil   1614.173mil   2649.606mil  T         90.00 10uF           
+R9         FP_0603_RES       1299.213mil   2303.149mil   1299.213mil    2303.15mil   1299.213mil   2338.583mil  T        270.00 1k             
+R25        FP_0603_RES       1299.213mil   2165.354mil   1299.213mil   2165.354mil   1299.213mil   2129.921mil  T         90.00 3k9            
+U7         SUPPLY_SOT223     1811.024mil   2755.905mil   1811.024mil   2755.905mil   1720.473mil   2638.779mil  T         90.00 LD1117xx       
+L1         SRR1206_T          787.402mil   1929.134mil    787.402mil   1929.134mil    590.551mil   1929.134mil  T        360.00 100uH          
+U6         SUPPLY_TO-263_5    767.717mil       2500mil    767.716mil       2500mil    633.859mil   2297.244mil  T          0.00 TS2576CM5-ADJ  
+C13        FP_0603_CAP_080       2590mil       1910mil       2590mil       1910mil   2625.433mil       1910mil  T        180.00 22p            
+C14        FP_0603_CAP_080       2730mil       1910mil       2730mil       1910mil   2765.433mil       1910mil  T        180.00 22p            
+R20        FP_0603_RES           2860mil       1910mil       2860mil       1910mil   2824.567mil       1910mil  T        360.00 390R           
+Y1         FP_CRYSTAL_HC49_SMD   2722.677mil       1770mil       2890mil       1770mil       2890mil       1770mil  T        180.00 8MHz Quartz HC49
+

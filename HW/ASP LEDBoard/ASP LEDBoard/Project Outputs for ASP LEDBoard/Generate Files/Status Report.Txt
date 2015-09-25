@@ -1,0 +1,10 @@
+Output: Bill of Materials
+Type  : BOM
+From  : Project [ASP LEDBoard.PrjPcb]
+   Generated File[Bill of Materials-ASP LEDBoard.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 11:00:10 On 2013.09.27.

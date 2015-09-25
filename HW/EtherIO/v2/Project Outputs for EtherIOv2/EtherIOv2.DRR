@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: EtherIOv2.PcbDoc   2012.10.03.  22:23:01
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : EtherIOv2.TXT
+EIA File   : EtherIOv2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        8mil (0.2032mm)          Round          199              35.93 Inch (912.51 mm)
+T2        23.6mil (0.59944mm)      Round          2                0.08 Inch (2.00 mm)
+T3        31.5mil (0.8001mm)       Round          8                9.65 Inch (245.01 mm)
+T4        35.4mil (0.89916mm)      Round          27               10.40 Inch (264.06 mm)
+T5        39.4mil (1.00076mm)      Round          33               12.47 Inch (316.63 mm)
+T6        43.3mil (1.09982mm)      Round          12               2.14 Inch (54.48 mm)
+T7        49.2mil (1.24968mm)      Round          2                0.26 Inch (6.50 mm)
+T8        55.1mil (1.39954mm)      Round          41               9.57 Inch (243.02 mm)
+T9        59.1mil (1.50114mm)      Round          2                0.20 Inch (5.00 mm)
+T10       65mil (1.651mm)          Round          2                0.61 Inch (15.49 mm)
+T11       137.8mil (3.50012mm)     Round          2                4.48 Inch (113.69 mm)
+T12       128mil (3.2512mm)        Round          2         NPTH   0.45 Inch (11.43 mm)
+T13       130mil (3.302mm)         Round          2         NPTH   0.45 Inch (11.43 mm)
+---------------------------------------------------------------------------
+Totals                                            334              86.66 Inch (2201.25 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:01

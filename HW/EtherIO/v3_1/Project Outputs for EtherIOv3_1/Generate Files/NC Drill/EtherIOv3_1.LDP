@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\SASA\pcbdesigns\DIAPRO\EtherIO\v3_1\EtherIOv3_1.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=etheriov3_1-plated.txt|LayerPairs=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=etheriov3_1-nonplated.txt|LayerPairs=gtl,gbl

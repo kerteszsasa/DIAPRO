@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=TX+ Pin=J6-3
+Removed Pin From Net: NetName=TX- Pin=J6-6
+Removed Pin From Net: NetName=GND Pin=J8-1
+Removed Pin From Net: NetName=A+ Pin=W7-1
+Removed Pin From Net: NetName=A- Pin=W8-1
+Removed Pin From Net: NetName=GND Pin=W9-1
+Change Component Comment : Designator=W7 Old Comment=A+/SDA New Comment=ALARM_OUT/SDA
+Change Component Comment : Designator=W8 Old Comment=A-/SCL New Comment=A+/SCL
+Change Component Comment : Designator=W9 Old Comment=GND/U0TX New Comment=A-/U0TX
+Added Component: Designator=W12(0603 3WAY JUMPER)
+Added Component: Designator=W13(0603 3WAY JUMPER)
+Added Component: Designator=W14(0603 3WAY JUMPER)
+Added Pin To Net: NetName=A+ Pin=W8-1
+Added Pin To Net: NetName=A- Pin=W9-1
+Added Pin To Net: NetName=TX+ Pin=W12-1
+Added Pin To Net: NetName=TX- Pin=W13-1
+Added Pin To Net: NetName=GND Pin=W14-3
+Change Net Name : Old Net Name=A+/SDA New Net Name=ALARM_OUT/SDA
+Change Net Name : Old Net Name=A-/SCL New Net Name=A+/SCL
+Change Net Name : Old Net Name=GND/U0TX New Net Name=A-/U0TX
+Added Pin To Net: NetName=ALARM_OUT Pin=W7-1
+Added Pin To Net: NetName=ALARM_OUT Pin=W13-3
+Added Net: Name=ALARM_OUT
+Added Pin To Net: NetName=ALRM_IN / GND Pin=J8-1
+Added Pin To Net: NetName=ALRM_IN / GND Pin=W14-2
+Added Net: Name=ALRM_IN / GND
+Added Pin To Net: NetName=ALRM_IN Pin=W12-3
+Added Pin To Net: NetName=ALRM_IN Pin=W14-1
+Added Net: Name=ALRM_IN
+Added Pin To Net: NetName=NetJ6_3 Pin=J6-3
+Added Pin To Net: NetName=NetJ6_3 Pin=W12-2
+Added Net: Name=NetJ6_3
+Added Pin To Net: NetName=NetJ6_6 Pin=J6-6
+Added Pin To Net: NetName=NetJ6_6 Pin=W13-2
+Added Net: Name=NetJ6_6
+Added Member To Class: ClassName=Supplements Member=Component W12 TX+/ALRM_IN
+Added Member To Class: ClassName=Supplements Member=Component W13 TX-/ALARM_OUT
+Added Member To Class: ClassName=Supplements Member=Component W14 ALRM_IN / GND

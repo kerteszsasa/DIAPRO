@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: EtherIOv3_2.PcbDoc   2015.07.14.  21:44:01
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : EtherIOv3_2-Plated.TXT
+ASCII Non-Plated RoundHoles File : EtherIOv3_2-NonPlated.TXT
+EIA File   : EtherIOv3_2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        8mil (0.2032mm)          Round          7                1.20 Inch (30.51 mm)
+T2        10mil (0.254mm)          Round          202              39.31 Inch (998.45 mm)
+T3        23.6mil (0.59944mm)      Round          2                0.08 Inch (2.00 mm)
+T4        31.5mil (0.8001mm)       Round          3                0.30 Inch (7.62 mm)
+T5        35.4mil (0.89916mm)      Round          28               9.74 Inch (247.51 mm)
+T6        39.4mil (1.00076mm)      Round          31               10.57 Inch (268.44 mm)
+T7        43.3mil (1.09982mm)      Round          12               2.14 Inch (54.48 mm)
+T8        49.2mil (1.24968mm)      Round          2                0.26 Inch (6.50 mm)
+T9        51mil (1.2954mm)         Round          2                0.28 Inch (7.01 mm)
+T10       55.1mil (1.39954mm)      Round          41               9.57 Inch (243.02 mm)
+T11       59.1mil (1.50114mm)      Round          2                0.20 Inch (5.00 mm)
+T12       65mil (1.651mm)          Round          2                0.61 Inch (15.49 mm)
+T13       137.8mil (3.50012mm)     Round          2                4.48 Inch (113.69 mm)
+T14       128mil (3.2512mm)        Round          2         NPTH   0.45 Inch (11.43 mm)
+T15       130mil (3.302mm)         Round          2         NPTH   0.45 Inch (11.43 mm)
+---------------------------------------------------------------------------
+Totals                                            340              79.63 Inch (2022.58 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

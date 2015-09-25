@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: WDUExtensionBoard_v2.PcbDoc   2015.03.26.  23:56:32
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : WDUExtensionBoard_v2-RoundHoles-Plated.TXT
+ASCII Non-Plated SlotHoles File : WDUExtensionBoard_v2-SlotHoles-NonPlated.TXT
+EIA File   : WDUExtensionBoard_v2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        20mil (0.508mm)          Round          27               7.07 Inch (179.58 mm)
+T2        31.5mil (0.8001mm)       Round          3                0.30 Inch (7.62 mm)
+T3        35.4mil (0.89916mm)      Round          15               3.87 Inch (98.40 mm)
+T4        55.1mil (1.39954mm)      Round          9                1.10 Inch (28.00 mm)
+T5        169.3mil (4.30022mm)     Round          4                5.72 Inch (145.19 mm)
+T6        90.6mil (2.30124mm)      Slot           4         NPTH   290.69 Inch (7383.46 mm)
+---------------------------------------------------------------------------
+Totals                                            62               308.75 Inch (7842.24 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

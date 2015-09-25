@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: radioslave.PcbDoc   2014.06.20.  17:36:29
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : radioslave-Plated.TXT
+EIA File   : radioslave.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        20mil (0.508mm)          Round          16               8.25 Inch (209.43 mm)
+T2        23.6mil (0.59944mm)      Round          6                0.46 Inch (11.60 mm)
+T3        28mil (0.7112mm)         Round          6                3.85 Inch (97.68 mm)
+T4        35.4mil (0.89916mm)      Round          17               6.47 Inch (164.22 mm)
+T5        39.4mil (1.00076mm)      Round          5                1.69 Inch (43.05 mm)
+T6        47.2mil (1.19888mm)      Round          5                0.71 Inch (18.09 mm)
+T7        55.1mil (1.39954mm)      Round          3                0.28 Inch (7.00 mm)
+T8        118mil (2.9972mm)        Round          3                0.49 Inch (12.34 mm)
+---------------------------------------------------------------------------
+Totals                                            61               22.18 Inch (563.41 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

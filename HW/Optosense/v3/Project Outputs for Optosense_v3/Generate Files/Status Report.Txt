@@ -1,0 +1,11 @@
+Output: Generates pick and place files csv
+Type  : Pick Place
+From  : PCB Document [Optosense.PcbDoc]
+   Generated File[Pick Place for Optosense.txt]
+   Generated File[Pick Place for Optosense.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 22:23:57 On 2015.08.11.

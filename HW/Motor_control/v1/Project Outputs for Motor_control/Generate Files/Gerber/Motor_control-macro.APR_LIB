@@ -1,0 +1,16 @@
+G04:AMPARAMS|DCode=28|XSize=59.1mil|YSize=39.4mil|CornerRadius=0mil|HoleSize=0mil|Usage=FLASHONLY|Rotation=90.000|XOffset=0mil|YOffset=0mil|HoleType=Round|Shape=Octagon|*
+%AMOCTAGOND28*
+4,1,8,0.0098,0.0295,-0.0098,0.0295,-0.0197,0.0197,-0.0197,-0.0197,-0.0098,-0.0295,0.0098,-0.0295,0.0197,-0.0197,0.0197,0.0197,0.0098,0.0295,0.0*
+%
+G04:AMPARAMS|DCode=31|XSize=21.7mil|YSize=47.2mil|CornerRadius=0mil|HoleSize=0mil|Usage=FLASHONLY|Rotation=0.000|XOffset=0mil|YOffset=0mil|HoleType=Round|Shape=Octagon|*
+%AMOCTAGOND31*
+4,1,8,-0.0054,0.0236,0.0054,0.0236,0.0108,0.0182,0.0108,-0.0182,0.0054,-0.0236,-0.0054,-0.0236,-0.0108,-0.0182,-0.0108,0.0182,-0.0054,0.0236,0.0*
+%
+G04:AMPARAMS|DCode=74|XSize=67.1mil|YSize=47.4mil|CornerRadius=0mil|HoleSize=0mil|Usage=FLASHONLY|Rotation=90.000|XOffset=0mil|YOffset=0mil|HoleType=Round|Shape=Octagon|*
+%AMOCTAGOND74*
+4,1,8,0.0118,0.0335,-0.0118,0.0335,-0.0237,0.0217,-0.0237,-0.0217,-0.0118,-0.0335,0.0118,-0.0335,0.0237,-0.0217,0.0237,0.0217,0.0118,0.0335,0.0*
+%
+G04:AMPARAMS|DCode=77|XSize=25.6mil|YSize=51.2mil|CornerRadius=0mil|HoleSize=0mil|Usage=FLASHONLY|Rotation=0.000|XOffset=0mil|YOffset=0mil|HoleType=Round|Shape=Octagon|*
+%AMOCTAGOND77*
+4,1,8,-0.0064,0.0256,0.0064,0.0256,0.0128,0.0192,0.0128,-0.0192,0.0064,-0.0256,-0.0064,-0.0256,-0.0128,-0.0192,-0.0128,0.0192,-0.0064,0.0256,0.0*
+%
