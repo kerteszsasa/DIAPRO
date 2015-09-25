@@ -1,0 +1,993 @@
+
+ASP_LEDBoard_tiny2313.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000004f0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          0000000d  00800060  00800060  00000564  2**0
+                  ALLOC
+  2 .debug_aranges 00000020  00000000  00000000  00000564  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 00000130  00000000  00000000  00000584  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000621  00000000  00000000  000006b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 0000017d  00000000  00000000  00000cd5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000072f  00000000  00000000  00000e52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000080  00000000  00000000  00001584  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000019c  00000000  00000000  00001604  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000002c0  00000000  00000000  000017a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000090  00000000  00000000  00001a60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	57 c0       	rjmp	.+174    	; 0xb2 <__vector_1>
+   4:	1e c0       	rjmp	.+60     	; 0x42 <__bad_interrupt>
+   6:	1d c0       	rjmp	.+58     	; 0x42 <__bad_interrupt>
+   8:	1c c0       	rjmp	.+56     	; 0x42 <__bad_interrupt>
+   a:	1b c0       	rjmp	.+54     	; 0x42 <__bad_interrupt>
+   c:	88 c0       	rjmp	.+272    	; 0x11e <__vector_6>
+   e:	19 c0       	rjmp	.+50     	; 0x42 <__bad_interrupt>
+  10:	18 c0       	rjmp	.+48     	; 0x42 <__bad_interrupt>
+  12:	17 c0       	rjmp	.+46     	; 0x42 <__bad_interrupt>
+  14:	16 c0       	rjmp	.+44     	; 0x42 <__bad_interrupt>
+  16:	15 c0       	rjmp	.+42     	; 0x42 <__bad_interrupt>
+  18:	14 c0       	rjmp	.+40     	; 0x42 <__bad_interrupt>
+  1a:	13 c0       	rjmp	.+38     	; 0x42 <__bad_interrupt>
+  1c:	12 c0       	rjmp	.+36     	; 0x42 <__bad_interrupt>
+  1e:	11 c0       	rjmp	.+34     	; 0x42 <__bad_interrupt>
+  20:	10 c0       	rjmp	.+32     	; 0x42 <__bad_interrupt>
+  22:	0f c0       	rjmp	.+30     	; 0x42 <__bad_interrupt>
+  24:	0e c0       	rjmp	.+28     	; 0x42 <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf ed       	ldi	r28, 0xDF	; 223
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_clear_bss>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	01 c0       	rjmp	.+2      	; 0x38 <.do_clear_bss_start>
+
+00000036 <.do_clear_bss_loop>:
+  36:	1d 92       	st	X+, r1
+
+00000038 <.do_clear_bss_start>:
+  38:	ad 36       	cpi	r26, 0x6D	; 109
+  3a:	b1 07       	cpc	r27, r17
+  3c:	e1 f7       	brne	.-8      	; 0x36 <.do_clear_bss_loop>
+  3e:	05 d1       	rcall	.+522    	; 0x24a <main>
+  40:	55 c2       	rjmp	.+1194   	; 0x4ec <_exit>
+
+00000042 <__bad_interrupt>:
+  42:	de cf       	rjmp	.-68     	; 0x0 <__vectors>
+
+00000044 <IRQ_handle>:
+#define power_up		3
+volatile char sytem_state=0;
+
+
+char IRQ_handle(void){
+		if(sytem_state==power_down){
+  44:	80 91 6c 00 	lds	r24, 0x006C
+  48:	88 23       	and	r24, r24
+  4a:	49 f4       	brne	.+18     	; 0x5e <IRQ_handle+0x1a>
+		sytem_state=switching_on;
+  4c:	81 e0       	ldi	r24, 0x01	; 1
+  4e:	80 93 6c 00 	sts	0x006C, r24
+		LED4_ON;
+  52:	96 9a       	sbi	0x12, 6	; 18
+		RELAY2_OFF; LED3_OFF; 
+  54:	d8 98       	cbi	0x1b, 0	; 27
+  56:	91 98       	cbi	0x12, 1	; 18
+		RELAY1_ON; LED2_ON;
+  58:	93 9a       	sbi	0x12, 3	; 18
+  5a:	90 9a       	sbi	0x12, 0	; 18
+  5c:	28 c0       	rjmp	.+80     	; 0xae <IRQ_handle+0x6a>
+		return 0;
+		}
+	if(sytem_state==switching_on ){
+  5e:	80 91 6c 00 	lds	r24, 0x006C
+  62:	81 30       	cpi	r24, 0x01	; 1
+  64:	31 f4       	brne	.+12     	; 0x72 <IRQ_handle+0x2e>
+		sytem_state=power_down;
+  66:	10 92 6c 00 	sts	0x006C, r1
+		LED4_OFF;
+  6a:	96 98       	cbi	0x12, 6	; 18
+		RELAY1_OFF; LED2_OFF;
+  6c:	93 98       	cbi	0x12, 3	; 18
+  6e:	90 98       	cbi	0x12, 0	; 18
+  70:	0a c0       	rjmp	.+20     	; 0x86 <IRQ_handle+0x42>
+		RELAY2_OFF; LED3_OFF;
+		return 0;
+		}
+	if(sytem_state==power_up){
+  72:	80 91 6c 00 	lds	r24, 0x006C
+  76:	83 30       	cpi	r24, 0x03	; 3
+  78:	49 f4       	brne	.+18     	; 0x8c <IRQ_handle+0x48>
+		sytem_state=switching_off;
+  7a:	82 e0       	ldi	r24, 0x02	; 2
+  7c:	80 93 6c 00 	sts	0x006C, r24
+		LED4_OFF;
+  80:	96 98       	cbi	0x12, 6	; 18
+		RELAY1_ON; LED2_ON;
+  82:	93 9a       	sbi	0x12, 3	; 18
+  84:	90 9a       	sbi	0x12, 0	; 18
+		RELAY2_OFF; LED3_OFF;
+  86:	d8 98       	cbi	0x1b, 0	; 27
+  88:	91 98       	cbi	0x12, 1	; 18
+  8a:	11 c0       	rjmp	.+34     	; 0xae <IRQ_handle+0x6a>
+		return 0;
+		}
+	if(sytem_state==switching_off ){
+  8c:	80 91 6c 00 	lds	r24, 0x006C
+  90:	82 30       	cpi	r24, 0x02	; 2
+  92:	49 f4       	brne	.+18     	; 0xa6 <IRQ_handle+0x62>
+		sytem_state=power_up;
+  94:	83 e0       	ldi	r24, 0x03	; 3
+  96:	80 93 6c 00 	sts	0x006C, r24
+		LED4_ON;
+  9a:	96 9a       	sbi	0x12, 6	; 18
+		RELAY1_ON; LED2_ON;
+  9c:	93 9a       	sbi	0x12, 3	; 18
+  9e:	90 9a       	sbi	0x12, 0	; 18
+		RELAY2_ON; LED3_ON;
+  a0:	d8 9a       	sbi	0x1b, 0	; 27
+  a2:	91 9a       	sbi	0x12, 1	; 18
+  a4:	04 c0       	rjmp	.+8      	; 0xae <IRQ_handle+0x6a>
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+  a6:	80 e1       	ldi	r24, 0x10	; 16
+  a8:	97 e2       	ldi	r25, 0x27	; 39
+  aa:	01 97       	sbiw	r24, 0x01	; 1
+  ac:	f1 f7       	brne	.-4      	; 0xaa <IRQ_handle+0x66>
+		return 0;
+		}
+	
+	_delay_ms(5);
+}
+  ae:	80 e0       	ldi	r24, 0x00	; 0
+  b0:	08 95       	ret
+
+000000b2 <__vector_1>:
+
+
+ //***********************************************************************
+ISR (INT0_vect){
+  b2:	1f 92       	push	r1
+  b4:	0f 92       	push	r0
+  b6:	0f b6       	in	r0, 0x3f	; 63
+  b8:	0f 92       	push	r0
+  ba:	11 24       	eor	r1, r1
+  bc:	2f 93       	push	r18
+  be:	3f 93       	push	r19
+  c0:	4f 93       	push	r20
+  c2:	5f 93       	push	r21
+  c4:	6f 93       	push	r22
+  c6:	7f 93       	push	r23
+  c8:	8f 93       	push	r24
+  ca:	9f 93       	push	r25
+  cc:	af 93       	push	r26
+  ce:	bf 93       	push	r27
+  d0:	ef 93       	push	r30
+  d2:	ff 93       	push	r31
+	if(MODE_12V) IRQ_handle();	//csak akkor kezelek le gombot, ha van 12V 
+  d4:	84 99       	sbic	0x10, 4	; 16
+  d6:	b6 df       	rcall	.-148    	; 0x44 <IRQ_handle>
+	
+}
+  d8:	ff 91       	pop	r31
+  da:	ef 91       	pop	r30
+  dc:	bf 91       	pop	r27
+  de:	af 91       	pop	r26
+  e0:	9f 91       	pop	r25
+  e2:	8f 91       	pop	r24
+  e4:	7f 91       	pop	r23
+  e6:	6f 91       	pop	r22
+  e8:	5f 91       	pop	r21
+  ea:	4f 91       	pop	r20
+  ec:	3f 91       	pop	r19
+  ee:	2f 91       	pop	r18
+  f0:	0f 90       	pop	r0
+  f2:	0f be       	out	0x3f, r0	; 63
+  f4:	0f 90       	pop	r0
+  f6:	1f 90       	pop	r1
+  f8:	18 95       	reti
+
+000000fa <IntInit>:
+
+void IntInit(void){
+	MCUCR= 1<<ISC01;	// falling level on int0
+  fa:	82 e0       	ldi	r24, 0x02	; 2
+  fc:	85 bf       	out	0x35, r24	; 53
+	GIMSK= 1<<INT0;		//enable int0 		
+  fe:	80 e4       	ldi	r24, 0x40	; 64
+ 100:	8b bf       	out	0x3b, r24	; 59
+}
+ 102:	08 95       	ret
+
+00000104 <PWMInit>:
+
+void PWMInit(void){
+	TCCR1A=1<<COM1A1 | 1<<WGM10; ;	// OC1A: set at top, clr at match
+ 104:	81 e8       	ldi	r24, 0x81	; 129
+ 106:	8f bd       	out	0x2f, r24	; 47
+	TCCR1B=  1<<CS10 | 1<<WGM12; //div8 //1<<CS11 |
+ 108:	89 e0       	ldi	r24, 0x09	; 9
+ 10a:	8e bd       	out	0x2e, r24	; 46
+	OCR1AH=0;
+ 10c:	1b bc       	out	0x2b, r1	; 43
+	OCR1AL=0; //alapállapotban kikapcsoljuk a ventillátort
+ 10e:	1a bc       	out	0x2a, r1	; 42
+
+}
+ 110:	08 95       	ret
+
+00000112 <Timer0Init>:
+
+void Timer0Init(void){
+	TCCR0A=0;			// normal operation no pwm
+ 112:	10 be       	out	0x30, r1	; 48
+	TCCR0B= 1<<CS00 ;	// no prescaler
+ 114:	81 e0       	ldi	r24, 0x01	; 1
+ 116:	83 bf       	out	0x33, r24	; 51
+	TIMSK= 1<<TOIE0;	//ovf int enable
+ 118:	82 e0       	ldi	r24, 0x02	; 2
+ 11a:	89 bf       	out	0x39, r24	; 57
+
+
+}
+ 11c:	08 95       	ret
+
+0000011e <__vector_6>:
+
+ISR (TIMER0_OVF_vect ){
+ 11e:	1f 92       	push	r1
+ 120:	0f 92       	push	r0
+ 122:	0f b6       	in	r0, 0x3f	; 63
+ 124:	0f 92       	push	r0
+ 126:	11 24       	eor	r1, r1
+ 128:	2f 93       	push	r18
+ 12a:	8f 93       	push	r24
+ 12c:	9f 93       	push	r25
+	timer_divider++;
+ 12e:	80 91 64 00 	lds	r24, 0x0064
+ 132:	90 91 65 00 	lds	r25, 0x0065
+ 136:	01 96       	adiw	r24, 0x01	; 1
+ 138:	90 93 65 00 	sts	0x0065, r25
+ 13c:	80 93 64 00 	sts	0x0064, r24
+	if(timer_divider==12000){
+ 140:	80 91 64 00 	lds	r24, 0x0064
+ 144:	90 91 65 00 	lds	r25, 0x0065
+ 148:	80 5e       	subi	r24, 0xE0	; 224
+ 14a:	9e 42       	sbci	r25, 0x2E	; 46
+ 14c:	09 f0       	breq	.+2      	; 0x150 <__vector_6+0x32>
+ 14e:	61 c0       	rjmp	.+194    	; 0x212 <__vector_6+0xf4>
+		timer_divider=0;
+ 150:	10 92 65 00 	sts	0x0065, r1
+ 154:	10 92 64 00 	sts	0x0064, r1
+		//ledek villogtatása
+		if(LED0_blink && !LED_blink_state) LED0_ON;
+ 158:	80 91 66 00 	lds	r24, 0x0066
+ 15c:	88 23       	and	r24, r24
+ 15e:	29 f0       	breq	.+10     	; 0x16a <__vector_6+0x4c>
+ 160:	80 91 6b 00 	lds	r24, 0x006B
+ 164:	88 23       	and	r24, r24
+ 166:	09 f4       	brne	.+2      	; 0x16a <__vector_6+0x4c>
+ 168:	95 9a       	sbi	0x12, 5	; 18
+		if(LED0_blink && LED_blink_state) LED0_OFF;
+ 16a:	80 91 66 00 	lds	r24, 0x0066
+ 16e:	88 23       	and	r24, r24
+ 170:	21 f0       	breq	.+8      	; 0x17a <__vector_6+0x5c>
+ 172:	80 91 6b 00 	lds	r24, 0x006B
+ 176:	81 11       	cpse	r24, r1
+ 178:	95 98       	cbi	0x12, 5	; 18
+		if(LED1_blink && !LED_blink_state) LED1_ON;
+ 17a:	80 91 67 00 	lds	r24, 0x0067
+ 17e:	88 23       	and	r24, r24
+ 180:	29 f0       	breq	.+10     	; 0x18c <__vector_6+0x6e>
+ 182:	80 91 6b 00 	lds	r24, 0x006B
+ 186:	88 23       	and	r24, r24
+ 188:	09 f4       	brne	.+2      	; 0x18c <__vector_6+0x6e>
+ 18a:	d9 9a       	sbi	0x1b, 1	; 27
+		if(LED1_blink && LED_blink_state) LED1_OFF;
+ 18c:	80 91 67 00 	lds	r24, 0x0067
+ 190:	88 23       	and	r24, r24
+ 192:	21 f0       	breq	.+8      	; 0x19c <__vector_6+0x7e>
+ 194:	80 91 6b 00 	lds	r24, 0x006B
+ 198:	81 11       	cpse	r24, r1
+ 19a:	d9 98       	cbi	0x1b, 1	; 27
+		if(LED2_blink && !LED_blink_state) LED2_ON;
+ 19c:	80 91 68 00 	lds	r24, 0x0068
+ 1a0:	88 23       	and	r24, r24
+ 1a2:	29 f0       	breq	.+10     	; 0x1ae <__vector_6+0x90>
+ 1a4:	80 91 6b 00 	lds	r24, 0x006B
+ 1a8:	88 23       	and	r24, r24
+ 1aa:	09 f4       	brne	.+2      	; 0x1ae <__vector_6+0x90>
+ 1ac:	90 9a       	sbi	0x12, 0	; 18
+		if(LED2_blink && LED_blink_state) LED2_OFF;
+ 1ae:	80 91 68 00 	lds	r24, 0x0068
+ 1b2:	88 23       	and	r24, r24
+ 1b4:	21 f0       	breq	.+8      	; 0x1be <__vector_6+0xa0>
+ 1b6:	80 91 6b 00 	lds	r24, 0x006B
+ 1ba:	81 11       	cpse	r24, r1
+ 1bc:	90 98       	cbi	0x12, 0	; 18
+		if(LED3_blink && !LED_blink_state) LED3_ON;
+ 1be:	80 91 69 00 	lds	r24, 0x0069
+ 1c2:	88 23       	and	r24, r24
+ 1c4:	29 f0       	breq	.+10     	; 0x1d0 <__vector_6+0xb2>
+ 1c6:	80 91 6b 00 	lds	r24, 0x006B
+ 1ca:	88 23       	and	r24, r24
+ 1cc:	09 f4       	brne	.+2      	; 0x1d0 <__vector_6+0xb2>
+ 1ce:	91 9a       	sbi	0x12, 1	; 18
+		if(LED3_blink && LED_blink_state) LED3_OFF;
+ 1d0:	80 91 69 00 	lds	r24, 0x0069
+ 1d4:	88 23       	and	r24, r24
+ 1d6:	21 f0       	breq	.+8      	; 0x1e0 <__vector_6+0xc2>
+ 1d8:	80 91 6b 00 	lds	r24, 0x006B
+ 1dc:	81 11       	cpse	r24, r1
+ 1de:	91 98       	cbi	0x12, 1	; 18
+		if(LED4_blink && !LED_blink_state) LED4_ON;
+ 1e0:	80 91 6a 00 	lds	r24, 0x006A
+ 1e4:	88 23       	and	r24, r24
+ 1e6:	29 f0       	breq	.+10     	; 0x1f2 <__vector_6+0xd4>
+ 1e8:	80 91 6b 00 	lds	r24, 0x006B
+ 1ec:	88 23       	and	r24, r24
+ 1ee:	09 f4       	brne	.+2      	; 0x1f2 <__vector_6+0xd4>
+ 1f0:	96 9a       	sbi	0x12, 6	; 18
+		if(LED4_blink && LED_blink_state) LED4_OFF;
+ 1f2:	80 91 6a 00 	lds	r24, 0x006A
+ 1f6:	88 23       	and	r24, r24
+ 1f8:	21 f0       	breq	.+8      	; 0x202 <__vector_6+0xe4>
+ 1fa:	80 91 6b 00 	lds	r24, 0x006B
+ 1fe:	81 11       	cpse	r24, r1
+ 200:	96 98       	cbi	0x12, 6	; 18
+		LED_blink_state=!LED_blink_state;
+ 202:	80 91 6b 00 	lds	r24, 0x006B
+ 206:	90 e0       	ldi	r25, 0x00	; 0
+ 208:	88 23       	and	r24, r24
+ 20a:	09 f4       	brne	.+2      	; 0x20e <__vector_6+0xf0>
+ 20c:	91 e0       	ldi	r25, 0x01	; 1
+ 20e:	90 93 6b 00 	sts	0x006B, r25
+	
+	}
+	//vantillátor mûkösésének ellenõrzése
+	if(FAN1_H) FAN1H_state=10;
+ 212:	b7 9b       	sbis	0x16, 7	; 22
+ 214:	03 c0       	rjmp	.+6      	; 0x21c <__vector_6+0xfe>
+ 216:	8a e0       	ldi	r24, 0x0A	; 10
+ 218:	80 93 60 00 	sts	0x0060, r24
+	if(FAN1_L) FAN1L_state=10;
+ 21c:	b7 99       	sbic	0x16, 7	; 22
+ 21e:	03 c0       	rjmp	.+6      	; 0x226 <__vector_6+0x108>
+ 220:	8a e0       	ldi	r24, 0x0A	; 10
+ 222:	80 93 61 00 	sts	0x0061, r24
+	if(FAN2_H) FAN2H_state=10;
+ 226:	b6 9b       	sbis	0x16, 6	; 22
+ 228:	03 c0       	rjmp	.+6      	; 0x230 <__vector_6+0x112>
+ 22a:	8a e0       	ldi	r24, 0x0A	; 10
+ 22c:	80 93 62 00 	sts	0x0062, r24
+	if(FAN2_L) FAN2L_state=10;
+ 230:	b6 99       	sbic	0x16, 6	; 22
+ 232:	03 c0       	rjmp	.+6      	; 0x23a <__vector_6+0x11c>
+ 234:	8a e0       	ldi	r24, 0x0A	; 10
+ 236:	80 93 63 00 	sts	0x0063, r24
+}
+ 23a:	9f 91       	pop	r25
+ 23c:	8f 91       	pop	r24
+ 23e:	2f 91       	pop	r18
+ 240:	0f 90       	pop	r0
+ 242:	0f be       	out	0x3f, r0	; 63
+ 244:	0f 90       	pop	r0
+ 246:	1f 90       	pop	r1
+ 248:	18 95       	reti
+
+0000024a <main>:
+
+
+
+//***********************************************************************
+int main(){
+ 24a:	0f 93       	push	r16
+ 24c:	1f 93       	push	r17
+	//Portinit
+	DDRA=0b00000011;
+ 24e:	83 e0       	ldi	r24, 0x03	; 3
+ 250:	8a bb       	out	0x1a, r24	; 26
+	DDRB=0b00001000;
+ 252:	88 e0       	ldi	r24, 0x08	; 8
+ 254:	87 bb       	out	0x17, r24	; 23
+	DDRD=0b01101011;
+ 256:	8b e6       	ldi	r24, 0x6B	; 107
+ 258:	81 bb       	out	0x11, r24	; 17
+	if(MODE_12V) IRQ_handle();	//csak akkor kezelek le gombot, ha van 12V 
+	
+}
+
+void IntInit(void){
+	MCUCR= 1<<ISC01;	// falling level on int0
+ 25a:	92 e0       	ldi	r25, 0x02	; 2
+ 25c:	95 bf       	out	0x35, r25	; 53
+	GIMSK= 1<<INT0;		//enable int0 		
+ 25e:	80 e4       	ldi	r24, 0x40	; 64
+ 260:	8b bf       	out	0x3b, r24	; 59
+}
+
+void PWMInit(void){
+	TCCR1A=1<<COM1A1 | 1<<WGM10; ;	// OC1A: set at top, clr at match
+ 262:	81 e8       	ldi	r24, 0x81	; 129
+ 264:	8f bd       	out	0x2f, r24	; 47
+	TCCR1B=  1<<CS10 | 1<<WGM12; //div8 //1<<CS11 |
+ 266:	89 e0       	ldi	r24, 0x09	; 9
+ 268:	8e bd       	out	0x2e, r24	; 46
+	OCR1AH=0;
+ 26a:	1b bc       	out	0x2b, r1	; 43
+	OCR1AL=0; //alapállapotban kikapcsoljuk a ventillátort
+ 26c:	1a bc       	out	0x2a, r1	; 42
+
+}
+
+void Timer0Init(void){
+	TCCR0A=0;			// normal operation no pwm
+ 26e:	10 be       	out	0x30, r1	; 48
+	TCCR0B= 1<<CS00 ;	// no prescaler
+ 270:	81 e0       	ldi	r24, 0x01	; 1
+ 272:	83 bf       	out	0x33, r24	; 51
+	TIMSK= 1<<TOIE0;	//ovf int enable
+ 274:	99 bf       	out	0x39, r25	; 57
+	DDRD=0b01101011;
+
+	IntInit();
+	PWMInit();
+	Timer0Init();
+	sei();
+ 276:	78 94       	sei
+				LED0_ON;
+				OCR1AL=FAN_SPEED;
+				
+			}
+			else{
+				OCR1AL=255;
+ 278:	bf ef       	ldi	r27, 0xFF	; 255
+		//FAN test
+		if(!sytem_state==power_down)
+			if(FAN1H_state & FAN1L_state & FAN2H_state & FAN2L_state) {
+				LED0_blink=0;
+				LED0_ON;
+				OCR1AL=FAN_SPEED;
+ 27a:	1a e0       	ldi	r17, 0x0A	; 10
+ 27c:	48 ec       	ldi	r20, 0xC8	; 200
+ 27e:	50 e0       	ldi	r21, 0x00	; 0
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			if(sytem_state==switching_on ){
+				sytem_state=power_up;
+ 280:	60 ed       	ldi	r22, 0xD0	; 208
+ 282:	77 e0       	ldi	r23, 0x07	; 7
+ 284:	03 e0       	ldi	r16, 0x03	; 3
+			LED1_blink=0;
+			LED1_ON;
+		}
+
+		if(!PROC_SIGNAL && !sytem_state==power_down){
+			LED1_blink=1;
+ 286:	a1 e0       	ldi	r26, 0x01	; 1
+	Timer0Init();
+	sei();
+
+while(1){	//fõciklus
+	
+	 LED0_blink=0;
+ 288:	10 92 66 00 	sts	0x0066, r1
+	 LED1_blink=0;
+ 28c:	10 92 67 00 	sts	0x0067, r1
+	 LED2_blink=0;
+ 290:	10 92 68 00 	sts	0x0068, r1
+	 LED3_blink=0;
+ 294:	10 92 69 00 	sts	0x0069, r1
+	 LED4_blink=0;
+ 298:	10 92 6a 00 	sts	0x006A, r1
+	 LED0_OFF;
+ 29c:	95 98       	cbi	0x12, 5	; 18
+	 LED1_OFF;
+ 29e:	d9 98       	cbi	0x1b, 1	; 27
+	 LED2_OFF;
+ 2a0:	90 98       	cbi	0x12, 0	; 18
+	 LED3_OFF;
+ 2a2:	91 98       	cbi	0x12, 1	; 18
+	 LED4_OFF;
+ 2a4:	96 98       	cbi	0x12, 6	; 18
+	 RELAY1_OFF;
+ 2a6:	93 98       	cbi	0x12, 3	; 18
+	 RELAY2_OFF;
+ 2a8:	d8 98       	cbi	0x1b, 0	; 27
+ 2aa:	c3 c0       	rjmp	.+390    	; 0x432 <main+0x1e8>
+
+	while(MODE_12V){
+				
+
+		//FAN test
+		if(!sytem_state==power_down)
+ 2ac:	80 91 6c 00 	lds	r24, 0x006C
+ 2b0:	88 23       	and	r24, r24
+ 2b2:	a1 f0       	breq	.+40     	; 0x2dc <main+0x92>
+			if(FAN1H_state & FAN1L_state & FAN2H_state & FAN2L_state) {
+ 2b4:	30 91 60 00 	lds	r19, 0x0060
+ 2b8:	80 91 61 00 	lds	r24, 0x0061
+ 2bc:	90 91 62 00 	lds	r25, 0x0062
+ 2c0:	20 91 63 00 	lds	r18, 0x0063
+ 2c4:	83 23       	and	r24, r19
+ 2c6:	89 23       	and	r24, r25
+ 2c8:	82 23       	and	r24, r18
+ 2ca:	29 f0       	breq	.+10     	; 0x2d6 <main+0x8c>
+				LED0_blink=0;
+ 2cc:	10 92 66 00 	sts	0x0066, r1
+				LED0_ON;
+ 2d0:	95 9a       	sbi	0x12, 5	; 18
+				OCR1AL=FAN_SPEED;
+ 2d2:	1a bd       	out	0x2a, r17	; 42
+ 2d4:	03 c0       	rjmp	.+6      	; 0x2dc <main+0x92>
+				
+			}
+			else{
+				OCR1AL=255;
+ 2d6:	ba bd       	out	0x2a, r27	; 42
+				LED0_blink=1;
+ 2d8:	a0 93 66 00 	sts	0x0066, r26
+		}
+			
+			 
+		if(sytem_state==power_down) {
+ 2dc:	80 91 6c 00 	lds	r24, 0x006C
+ 2e0:	88 23       	and	r24, r24
+ 2e2:	21 f4       	brne	.+8      	; 0x2ec <main+0xa2>
+			OCR1AL=0;
+ 2e4:	1a bc       	out	0x2a, r1	; 42
+			LED0_blink=0;
+ 2e6:	10 92 66 00 	sts	0x0066, r1
+			LED0_ON;
+ 2ea:	95 9a       	sbi	0x12, 5	; 18
+		}
+
+
+		if(FAN1H_state) FAN1H_state--;
+ 2ec:	80 91 60 00 	lds	r24, 0x0060
+ 2f0:	88 23       	and	r24, r24
+ 2f2:	29 f0       	breq	.+10     	; 0x2fe <main+0xb4>
+ 2f4:	80 91 60 00 	lds	r24, 0x0060
+ 2f8:	81 50       	subi	r24, 0x01	; 1
+ 2fa:	80 93 60 00 	sts	0x0060, r24
+		if(FAN1L_state) FAN1L_state--;
+ 2fe:	80 91 61 00 	lds	r24, 0x0061
+ 302:	88 23       	and	r24, r24
+ 304:	29 f0       	breq	.+10     	; 0x310 <main+0xc6>
+ 306:	80 91 61 00 	lds	r24, 0x0061
+ 30a:	81 50       	subi	r24, 0x01	; 1
+ 30c:	80 93 61 00 	sts	0x0061, r24
+		if(FAN2H_state) FAN2H_state--;
+ 310:	80 91 62 00 	lds	r24, 0x0062
+ 314:	88 23       	and	r24, r24
+ 316:	29 f0       	breq	.+10     	; 0x322 <main+0xd8>
+ 318:	80 91 62 00 	lds	r24, 0x0062
+ 31c:	81 50       	subi	r24, 0x01	; 1
+ 31e:	80 93 62 00 	sts	0x0062, r24
+		if(FAN2L_state) FAN2L_state--;
+ 322:	80 91 63 00 	lds	r24, 0x0063
+ 326:	88 23       	and	r24, r24
+ 328:	29 f0       	breq	.+10     	; 0x334 <main+0xea>
+ 32a:	80 91 63 00 	lds	r24, 0x0063
+ 32e:	81 50       	subi	r24, 0x01	; 1
+ 330:	80 93 63 00 	sts	0x0063, r24
+
+
+		//uC test
+		if(PROC_SIGNAL && !sytem_state==power_down){
+ 334:	b1 9b       	sbis	0x16, 1	; 22
+ 336:	07 c0       	rjmp	.+14     	; 0x346 <main+0xfc>
+ 338:	80 91 6c 00 	lds	r24, 0x006C
+ 33c:	88 23       	and	r24, r24
+ 33e:	19 f0       	breq	.+6      	; 0x346 <main+0xfc>
+			LED1_blink=0;
+ 340:	10 92 67 00 	sts	0x0067, r1
+			LED1_ON;
+ 344:	d9 9a       	sbi	0x1b, 1	; 27
+		}
+
+		if(!PROC_SIGNAL && !sytem_state==power_down){
+ 346:	b1 99       	sbic	0x16, 1	; 22
+ 348:	06 c0       	rjmp	.+12     	; 0x356 <main+0x10c>
+ 34a:	80 91 6c 00 	lds	r24, 0x006C
+ 34e:	88 23       	and	r24, r24
+ 350:	11 f0       	breq	.+4      	; 0x356 <main+0x10c>
+			LED1_blink=1;
+ 352:	a0 93 67 00 	sts	0x0067, r26
+			//LED1_ON;
+		}
+
+		if( sytem_state==power_down){
+ 356:	80 91 6c 00 	lds	r24, 0x006C
+ 35a:	88 23       	and	r24, r24
+ 35c:	19 f4       	brne	.+6      	; 0x364 <main+0x11a>
+			LED1_blink=0;
+ 35e:	10 92 67 00 	sts	0x0067, r1
+			LED1_OFF;
+ 362:	d9 98       	cbi	0x1b, 1	; 27
+		}
+
+
+		//relék kapcsolása
+		if(sytem_state==switching_on ){
+ 364:	80 91 6c 00 	lds	r24, 0x006C
+ 368:	81 30       	cpi	r24, 0x01	; 1
+ 36a:	71 f5       	brne	.+92     	; 0x3c8 <main+0x17e>
+ 36c:	80 e1       	ldi	r24, 0x10	; 16
+ 36e:	97 e2       	ldi	r25, 0x27	; 39
+ 370:	fa 01       	movw	r30, r20
+ 372:	31 97       	sbiw	r30, 0x01	; 1
+ 374:	f1 f7       	brne	.-4      	; 0x372 <main+0x128>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 376:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 378:	d9 f7       	brne	.-10     	; 0x370 <main+0x126>
+ 37a:	80 e1       	ldi	r24, 0x10	; 16
+ 37c:	97 e2       	ldi	r25, 0x27	; 39
+ 37e:	fa 01       	movw	r30, r20
+ 380:	31 97       	sbiw	r30, 0x01	; 1
+ 382:	f1 f7       	brne	.-4      	; 0x380 <main+0x136>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 384:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 386:	d9 f7       	brne	.-10     	; 0x37e <main+0x134>
+ 388:	80 e1       	ldi	r24, 0x10	; 16
+ 38a:	97 e2       	ldi	r25, 0x27	; 39
+ 38c:	fa 01       	movw	r30, r20
+ 38e:	31 97       	sbiw	r30, 0x01	; 1
+ 390:	f1 f7       	brne	.-4      	; 0x38e <main+0x144>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 392:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 394:	d9 f7       	brne	.-10     	; 0x38c <main+0x142>
+ 396:	80 e1       	ldi	r24, 0x10	; 16
+ 398:	97 e2       	ldi	r25, 0x27	; 39
+ 39a:	fa 01       	movw	r30, r20
+ 39c:	31 97       	sbiw	r30, 0x01	; 1
+ 39e:	f1 f7       	brne	.-4      	; 0x39c <main+0x152>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3a0:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3a2:	d9 f7       	brne	.-10     	; 0x39a <main+0x150>
+ 3a4:	80 e1       	ldi	r24, 0x10	; 16
+ 3a6:	97 e2       	ldi	r25, 0x27	; 39
+ 3a8:	fa 01       	movw	r30, r20
+ 3aa:	31 97       	sbiw	r30, 0x01	; 1
+ 3ac:	f1 f7       	brne	.-4      	; 0x3aa <main+0x160>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3ae:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3b0:	d9 f7       	brne	.-10     	; 0x3a8 <main+0x15e>
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			if(sytem_state==switching_on ){
+ 3b2:	80 91 6c 00 	lds	r24, 0x006C
+ 3b6:	81 30       	cpi	r24, 0x01	; 1
+ 3b8:	39 f4       	brne	.+14     	; 0x3c8 <main+0x17e>
+				sytem_state=power_up;
+ 3ba:	00 93 6c 00 	sts	0x006C, r16
+				LED4_ON;
+ 3be:	96 9a       	sbi	0x12, 6	; 18
+				RELAY1_ON; LED2_ON;
+ 3c0:	93 9a       	sbi	0x12, 3	; 18
+ 3c2:	90 9a       	sbi	0x12, 0	; 18
+				RELAY2_ON; LED3_ON;
+ 3c4:	d8 9a       	sbi	0x1b, 0	; 27
+ 3c6:	91 9a       	sbi	0x12, 1	; 18
+			}
+		}
+
+		if(sytem_state==switching_off ){
+ 3c8:	80 91 6c 00 	lds	r24, 0x006C
+ 3cc:	82 30       	cpi	r24, 0x02	; 2
+ 3ce:	71 f5       	brne	.+92     	; 0x42c <main+0x1e2>
+ 3d0:	80 e1       	ldi	r24, 0x10	; 16
+ 3d2:	97 e2       	ldi	r25, 0x27	; 39
+ 3d4:	fa 01       	movw	r30, r20
+ 3d6:	31 97       	sbiw	r30, 0x01	; 1
+ 3d8:	f1 f7       	brne	.-4      	; 0x3d6 <main+0x18c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3da:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3dc:	d9 f7       	brne	.-10     	; 0x3d4 <main+0x18a>
+ 3de:	80 e1       	ldi	r24, 0x10	; 16
+ 3e0:	97 e2       	ldi	r25, 0x27	; 39
+ 3e2:	fa 01       	movw	r30, r20
+ 3e4:	31 97       	sbiw	r30, 0x01	; 1
+ 3e6:	f1 f7       	brne	.-4      	; 0x3e4 <main+0x19a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3e8:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3ea:	d9 f7       	brne	.-10     	; 0x3e2 <main+0x198>
+ 3ec:	80 e1       	ldi	r24, 0x10	; 16
+ 3ee:	97 e2       	ldi	r25, 0x27	; 39
+ 3f0:	fa 01       	movw	r30, r20
+ 3f2:	31 97       	sbiw	r30, 0x01	; 1
+ 3f4:	f1 f7       	brne	.-4      	; 0x3f2 <main+0x1a8>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3f6:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3f8:	d9 f7       	brne	.-10     	; 0x3f0 <main+0x1a6>
+ 3fa:	80 e1       	ldi	r24, 0x10	; 16
+ 3fc:	97 e2       	ldi	r25, 0x27	; 39
+ 3fe:	fa 01       	movw	r30, r20
+ 400:	31 97       	sbiw	r30, 0x01	; 1
+ 402:	f1 f7       	brne	.-4      	; 0x400 <main+0x1b6>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 404:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 406:	d9 f7       	brne	.-10     	; 0x3fe <main+0x1b4>
+ 408:	80 e1       	ldi	r24, 0x10	; 16
+ 40a:	97 e2       	ldi	r25, 0x27	; 39
+ 40c:	fa 01       	movw	r30, r20
+ 40e:	31 97       	sbiw	r30, 0x01	; 1
+ 410:	f1 f7       	brne	.-4      	; 0x40e <main+0x1c4>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 412:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 414:	d9 f7       	brne	.-10     	; 0x40c <main+0x1c2>
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			_delay_ms(1000);
+			if(sytem_state==switching_off ){
+ 416:	80 91 6c 00 	lds	r24, 0x006C
+ 41a:	82 30       	cpi	r24, 0x02	; 2
+ 41c:	39 f4       	brne	.+14     	; 0x42c <main+0x1e2>
+				sytem_state=power_down;
+ 41e:	10 92 6c 00 	sts	0x006C, r1
+				LED4_OFF;
+ 422:	96 98       	cbi	0x12, 6	; 18
+				RELAY1_OFF; LED2_OFF;
+ 424:	93 98       	cbi	0x12, 3	; 18
+ 426:	90 98       	cbi	0x12, 0	; 18
+				RELAY2_OFF; LED3_OFF;
+ 428:	d8 98       	cbi	0x1b, 0	; 27
+ 42a:	91 98       	cbi	0x12, 1	; 18
+ 42c:	cb 01       	movw	r24, r22
+ 42e:	01 97       	sbiw	r24, 0x01	; 1
+ 430:	f1 f7       	brne	.-4      	; 0x42e <main+0x1e4>
+	 LED3_OFF;
+	 LED4_OFF;
+	 RELAY1_OFF;
+	 RELAY2_OFF;
+
+	while(MODE_12V){
+ 432:	84 99       	sbic	0x10, 4	; 16
+ 434:	3b cf       	rjmp	.-394    	; 0x2ac <main+0x62>
+		}
+		_delay_ms(1);
+		
+	}//end of MODE_12V
+
+	 LED0_blink=0;
+ 436:	10 92 66 00 	sts	0x0066, r1
+	 LED1_blink=0;
+ 43a:	10 92 67 00 	sts	0x0067, r1
+	 LED2_blink=0;
+ 43e:	10 92 68 00 	sts	0x0068, r1
+	 LED3_blink=0;
+ 442:	10 92 69 00 	sts	0x0069, r1
+	 LED4_blink=0;
+ 446:	10 92 6a 00 	sts	0x006A, r1
+	 LED0_OFF;
+ 44a:	95 98       	cbi	0x12, 5	; 18
+	 LED1_OFF;
+ 44c:	d9 98       	cbi	0x1b, 1	; 27
+	 LED2_OFF;
+ 44e:	90 98       	cbi	0x12, 0	; 18
+	 LED3_OFF;
+ 450:	91 98       	cbi	0x12, 1	; 18
+	 LED4_OFF;
+ 452:	96 98       	cbi	0x12, 6	; 18
+	 RELAY1_OFF;
+ 454:	93 98       	cbi	0x12, 3	; 18
+	 RELAY2_OFF;
+ 456:	d8 98       	cbi	0x1b, 0	; 27
+ 458:	46 c0       	rjmp	.+140    	; 0x4e6 <main+0x29c>
+
+	while(MODE_5V){
+		
+
+		//FAN test
+		if(FAN1H_state & FAN1L_state & FAN2H_state & FAN2L_state) {
+ 45a:	30 91 60 00 	lds	r19, 0x0060
+ 45e:	80 91 61 00 	lds	r24, 0x0061
+ 462:	90 91 62 00 	lds	r25, 0x0062
+ 466:	20 91 63 00 	lds	r18, 0x0063
+ 46a:	83 23       	and	r24, r19
+ 46c:	89 23       	and	r24, r25
+ 46e:	82 23       	and	r24, r18
+ 470:	29 f0       	breq	.+10     	; 0x47c <main+0x232>
+			LED1_blink=0;
+ 472:	10 92 67 00 	sts	0x0067, r1
+			LED1_ON;
+ 476:	d9 9a       	sbi	0x1b, 1	; 27
+			OCR1AL = FAN_SPEED;
+ 478:	1a bd       	out	0x2a, r17	; 42
+ 47a:	06 c0       	rjmp	.+12     	; 0x488 <main+0x23e>
+			//_delay_ms(1000);
+			
+		}
+		else{
+			LED1_blink=1; 
+ 47c:	a0 93 67 00 	sts	0x0067, r26
+			OCR1AL=255;
+ 480:	ba bd       	out	0x2a, r27	; 42
+ 482:	cb 01       	movw	r24, r22
+ 484:	01 97       	sbiw	r24, 0x01	; 1
+ 486:	f1 f7       	brne	.-4      	; 0x484 <main+0x23a>
+			_delay_ms(1);
+			
+		}
+
+		if(FAN1H_state) FAN1H_state--;
+ 488:	80 91 60 00 	lds	r24, 0x0060
+ 48c:	88 23       	and	r24, r24
+ 48e:	29 f0       	breq	.+10     	; 0x49a <main+0x250>
+ 490:	80 91 60 00 	lds	r24, 0x0060
+ 494:	81 50       	subi	r24, 0x01	; 1
+ 496:	80 93 60 00 	sts	0x0060, r24
+		if(FAN1L_state) FAN1L_state--;
+ 49a:	80 91 61 00 	lds	r24, 0x0061
+ 49e:	88 23       	and	r24, r24
+ 4a0:	29 f0       	breq	.+10     	; 0x4ac <main+0x262>
+ 4a2:	80 91 61 00 	lds	r24, 0x0061
+ 4a6:	81 50       	subi	r24, 0x01	; 1
+ 4a8:	80 93 61 00 	sts	0x0061, r24
+		if(FAN2H_state) FAN2H_state--;
+ 4ac:	80 91 62 00 	lds	r24, 0x0062
+ 4b0:	88 23       	and	r24, r24
+ 4b2:	29 f0       	breq	.+10     	; 0x4be <main+0x274>
+ 4b4:	80 91 62 00 	lds	r24, 0x0062
+ 4b8:	81 50       	subi	r24, 0x01	; 1
+ 4ba:	80 93 62 00 	sts	0x0062, r24
+		if(FAN2L_state) FAN2L_state--;
+ 4be:	80 91 63 00 	lds	r24, 0x0063
+ 4c2:	88 23       	and	r24, r24
+ 4c4:	29 f0       	breq	.+10     	; 0x4d0 <main+0x286>
+ 4c6:	80 91 63 00 	lds	r24, 0x0063
+ 4ca:	81 50       	subi	r24, 0x01	; 1
+ 4cc:	80 93 63 00 	sts	0x0063, r24
+
+		//uC test
+		if(PROC_SIGNAL){
+ 4d0:	b1 9b       	sbis	0x16, 1	; 22
+ 4d2:	04 c0       	rjmp	.+8      	; 0x4dc <main+0x292>
+			LED2_blink=0;
+ 4d4:	10 92 68 00 	sts	0x0068, r1
+			LED2_ON;
+ 4d8:	90 9a       	sbi	0x12, 0	; 18
+ 4da:	02 c0       	rjmp	.+4      	; 0x4e0 <main+0x296>
+		}
+		else LED2_blink=1;
+ 4dc:	a0 93 68 00 	sts	0x0068, r26
+ 4e0:	cb 01       	movw	r24, r22
+ 4e2:	01 97       	sbiw	r24, 0x01	; 1
+ 4e4:	f1 f7       	brne	.-4      	; 0x4e2 <main+0x298>
+	 LED3_OFF;
+	 LED4_OFF;
+	 RELAY1_OFF;
+	 RELAY2_OFF;
+
+	while(MODE_5V){
+ 4e6:	84 99       	sbic	0x10, 4	; 16
+ 4e8:	cf ce       	rjmp	.-610    	; 0x288 <main+0x3e>
+ 4ea:	b7 cf       	rjmp	.-146    	; 0x45a <main+0x210>
+
+000004ec <_exit>:
+ 4ec:	f8 94       	cli
+
+000004ee <__stop_program>:
+ 4ee:	ff cf       	rjmp	.-2      	; 0x4ee <__stop_program>
