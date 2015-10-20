@@ -1,0 +1,1 @@
+Ha az óramutató járásával megegyezõ irányba tekerem a potit, akkor nõ az érzékelési távolság.
